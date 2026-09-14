@@ -26,6 +26,3 @@ The verification uses exact integer and rational arithmetic. Parameter tables di
 
 The notebook verifies the finite algebraic conditions used in the two propositions. The arguments extending endpoint estimates to the intervening exponents, together with the geometric and analytic parts of the proof, are given in the paper.
 
-## Requirements
-
-The notebook has been evaluated successfully with **Wolfram Kernel 14.1**, using the default iteration and recursion limits. No additional packages are required.
