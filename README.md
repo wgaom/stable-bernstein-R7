@@ -1,28 +1,34 @@
 # Stable Bernstein in R⁷: algebraic verification
 
-Mathematica code for the finite algebraic checks in Propositions 8.1 and 10.1 of the accompanying paper on the stable Bernstein problem for six-dimensional minimal hypersurfaces in **R⁷**.
+This repository contains Lean and Mathematica implementations verifying the algebraic estimates needed in the paper on the stable Bernstein theorem in R⁷.
 
-**Paper:** [Manuscript link](https://example.com/manuscript) *(to be updated)*.
+## Files to read
 
-## Notebook
+- [`lean/R7/Definitions.lean`](lean/R7/Definitions.lean): parameters and definitions.
+- [`lean/R7/Theorems.lean`](lean/R7/Theorems.lean): the two estimates, `R7.Paper.scalar_bound` and `R7.Paper.spectral_bound`.
+- [`mathematica/Verification.nb`](mathematica/Verification.nb): definitions and exact verification in Mathematica.
 
-Open [`R7Verification.nb`](R7Verification.nb) in Mathematica, start a fresh kernel, and evaluate the notebook from top to bottom. It contains all required parameters and formulas; no companion files are needed to run the notebook.
+The remaining Lean files contain the proofs and exact rational certificates, grouped under `Algebra/`, `Scalar/`, `Spectral/`, and `Certificates/`.
 
-| Section | Contents |
-| --- | --- |
-| 1. Parameters and positivity tools | Parameter tables, Sturm sequences, Gram matrices, and leading principal minors. |
-| 2. Proposition 8.1: bridge estimates | Polynomial construction, an expanded example at the first left endpoint, and verification of all fifteen bridge intervals. |
-| 3. Proposition 10.1: spectral estimates | Homogeneous polynomial construction, gap expansion and reflection symmetry, an expanded example at the entry exponent, and verification at the entry and critical exponents, including boundary cases. |
-| 4. Summary | Results and checks that all required cases are included. |
+## Lean
 
-The examples display coefficient polynomials and leading principal minors before applying the positivity tests. The final summary reports `PASS` for each proposition when all its algebraic checks succeed. A failed check stops evaluation.
+Install [elan](https://github.com/leanprover/elan), then run:
 
-## Verification scope
+```sh
+git clone https://github.com/wgaom/stable-bernstein-R7.git
+cd stable-bernstein-R7/lean
+lake exe cache get
+lake build
+```
 
-- **Proposition 8.1:** parameter feasibility, interval coverage over `[2.46, 2.4962]`, agreement of polynomial reconstructions, and **120 Sturm tests** for the leading principal minors of 30 endpoint matrices.
-- **Proposition 10.1:** parameter conditions, homogeneous polynomial reconstruction, reflection symmetry, and complete coverage of the coefficient slices. At exponent `2.4962`, the code performs **1617 Sturm tests** for 231 matrices. At exponent `5/2`, it checks **2042 principal-minor signs** for 231 linear-term matrices and 85 quadratic-term matrices. Zero-gap boundary checks are included separately.
+On a fresh clone, omit `lake exe cache get` to build the required mathlib modules from source instead of using their precompiled cache. The R7 proofs are checked in either case.
 
-The verification uses exact integer and rational arithmetic. Parameter tables display terminating decimals without trailing zeros and other values as reduced fractions. Sturm's theorem certifies polynomial positivity on the nonnegative half-line; these tests do not rely on sampling numerical points.
+A successful build checks both theorem proofs and prints their axiom dependencies. Each must contain only `propext`, `Classical.choice`, and `Quot.sound`. The certificates are checked by the Lean kernel.
 
-The notebook verifies the finite algebraic conditions used in the two propositions. The arguments extending endpoint estimates to the intervening exponents, together with the geometric and analytic parts of the proof, are given in the paper.
+To compare the formal result with the paper, check the parameter table and definitions in `Definitions.lean`, then the hypotheses and conclusions in `Theorems.lean`. Successful compilation verifies the intervening algebraic proofs. The geometric and analytic arguments remain in the paper.
 
+## Mathematica
+
+Open [`mathematica/Verification.nb`](mathematica/Verification.nb) in Mathematica and select **Evaluation → Evaluate Notebook**.
+
+The notebook reports `PASS` when each estimate is successfully verified.

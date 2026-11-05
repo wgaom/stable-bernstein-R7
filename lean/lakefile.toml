@@ -1,0 +1,11 @@
+name = "R7"
+version = "1.0.0"
+defaultTargets = ["R7"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.30.0-rc2"
+
+[[lean_lib]]
+name = "R7"
