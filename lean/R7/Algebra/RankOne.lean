@@ -1,6 +1,9 @@
 import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
 import Mathlib.Data.Real.Basic
-import Mathlib.Tactic
+import Mathlib.Tactic.FieldSimp
+import Mathlib.Tactic.Ring
+import Mathlib.Tactic.Module
+import Mathlib.Analysis.Normed.Ring.Basic
 
 namespace R7.Core.RankOne
 open scoped Matrix

@@ -1,5 +1,14 @@
+import Mathlib.Data.Matrix.Mul
+import Mathlib.Data.Real.Sqrt
+import Mathlib.Algebra.BigOperators.Fin
+import Mathlib.Tactic.NormNum
 import Mathlib.Data.Real.Basic
-import Mathlib.Tactic
+import Mathlib.Tactic.FieldSimp
+import Mathlib.Tactic.Ring
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.Positivity
+import Mathlib.Tactic.Conv
+import Lean.Elab.Tactic.Omega
 
 namespace R7.Core.Gram
 open scoped BigOperators
@@ -224,3 +233,102 @@ theorem corrected_power_polynomial_pos (a : ℕ → ℝ) (n : ℕ)
   linarith
 
 end R7.Core.Gram
+
+namespace R7.Core.Gram.BasisNormNum
+open scoped BigOperators
+
+/-- Gram matrix of the block `I-cJ`. -/
+theorem top_gram (c : ℝ) (a b : Fin 5) :
+    (∑ j : Fin 5, ((if j = a then (1 : ℝ) else 0)-c) *
+      ((if j = b then (1 : ℝ) else 0)-c)) =
+      (if a = b then (1 : ℝ) else 0) + 5*c^2-2*c := by
+  have he (j : Fin 5) :
+      ((if j = a then (1 : ℝ) else 0)-c) * ((if j = b then (1 : ℝ) else 0)-c) =
+      (if j = a then (if a = b then (1 : ℝ) else 0) else 0)
+        -c*(if j = a then (1 : ℝ) else 0)-c*(if j = b then (1 : ℝ) else 0)+c^2 := by
+    by_cases hja : j = a <;> by_cases hjb : j = b <;>
+      simp_all <;> ring
+  simp_rw [he]
+  simp [Finset.sum_add_distrib, Finset.sum_sub_distrib]
+  ring
+
+/-- Gram matrix after adjoining a constant row. -/
+theorem six_five_gram (c d : ℝ) (a b : Fin 5) :
+    (∑ j : Fin 6,
+      (if j.val = 5 then d else (if j.val = a.val then (1 : ℝ) else 0)-c) *
+      (if j.val = 5 then d else (if j.val = b.val then (1 : ℝ) else 0)-c)) =
+      (if a = b then (1 : ℝ) else 0) + (5*c^2-2*c+d^2) := by
+  have hne (j : Fin 5) : j.val ≠ 5 := ne_of_lt j.isLt
+  rw [Fin.sum_univ_castSucc]
+  simp only [Fin.val_castSucc, Fin.val_last, hne, if_false, if_true, Fin.val_inj]
+  rw [top_gram]
+  ring
+
+/-- Gram identity for the fixed trace-free basis. -/
+theorem sqrt_six_basis_gram_sum (a b : ℕ) (ha : a < 5) (hb : b < 5) :
+    (∑ j : Fin 6,
+      (if j.val = 5 then 1 / Real.sqrt 6
+       else (if j.val = a then (1 : ℝ) else 0)-(1+1/Real.sqrt 6)/5) *
+      (if j.val = 5 then 1 / Real.sqrt 6
+       else (if j.val = b then (1 : ℝ) else 0)-(1+1/Real.sqrt 6)/5)) =
+      (if a = b then (1 : ℝ) else 0) := by
+  have hs : (Real.sqrt (6 : ℝ))^2 = 6 := Real.sq_sqrt (by norm_num)
+  have hd : (1 / Real.sqrt (6 : ℝ))^2 = 1/6 := by rw [div_pow, hs]; norm_num
+  have hz : 5*((1+1/Real.sqrt (6 : ℝ))/5)^2 -
+      2*((1+1/Real.sqrt (6 : ℝ))/5) + (1/Real.sqrt (6 : ℝ))^2 = 0 := by
+    nlinarith only [hd]
+  have hh := six_five_gram ((1+1/Real.sqrt (6 : ℝ))/5) (1/Real.sqrt (6 : ℝ))
+    (⟨a,ha⟩ : Fin 5) (⟨b,hb⟩ : Fin 5)
+  simpa only [Fin.val_mk, Fin.mk.injEq, hz, add_zero] using hh
+
+noncomputable def modelBasis : Matrix (Fin 6) (Fin 5) ℝ := fun j a =>
+ if j.val = 5 then 1 / Real.sqrt 6
+ else (if j.val = a.val then 1 else 0) - (1 + 1 / Real.sqrt 6) / 5
+
+theorem modelBasis_gram (a b : Fin 5) :
+    (modelBasis.transpose * modelBasis) a b =
+      (if a = b then (1 : ℝ) else 0) := by
+  change (∑ j : Fin 6, modelBasis j a * modelBasis j b) = _
+  simpa only [modelBasis, Fin.val_inj] using
+    sqrt_six_basis_gram_sum a.val b.val a.isLt b.isLt
+
+theorem modelBasis_isNat (a b : Fin 5) :
+    Mathlib.Meta.NormNum.IsNat ((modelBasis.transpose * modelBasis) a b)
+      (if a = b then 1 else 0) := by
+  refine ⟨?_⟩
+  rw [modelBasis_gram]
+  split_ifs <;> norm_num
+
+end R7.Core.Gram.BasisNormNum
+
+meta section
+open Lean Meta Qq
+open Mathlib.Meta.NormNum
+namespace R7.Core.Gram.BasisNormNum
+
+/-- NormNum evaluation of Gram entries for the paper's fixed basis. -/
+@[norm_num (((_ : Matrix (Fin 6) (Fin 5) ℝ).transpose *
+    (_ : Matrix (Fin 6) (Fin 5) ℝ)) _ _)]
+def evalPaperBasisGram : NormNumExt where
+  eval {u α} e := do
+    let args := e.getAppArgs
+    guard (args.size ≥ 4)
+    let A := args[args.size - 4]!
+    let B := args[args.size - 3]!
+    let a := args[args.size - 2]!
+    let b := args[args.size - 1]!
+    guard (B.isConstOf `R7.Proofs.basis)
+    guard (A.isAppOf `Matrix.transpose)
+    guard (A.getAppArgs.back! == B)
+    guard (← isDefEq α q(ℝ))
+    let av ← withTransparency .all <| whnf (mkProj ``Fin 0 a)
+    let bv ← withTransparency .all <| whnf (mkProj ``Fin 0 b)
+    let some ai := av.rawNatLit? | failure
+    let some bi := bv.rawNatLit? | failure
+    let lit : Q(ℕ) := mkRawNatLit (if ai == bi then 1 else 0)
+    let proof ← mkAppM ``modelBasis_isNat #[a,b]
+    let target ← mkAppM ``IsNat #[e,lit]
+    guard (← withTransparency .all <| isDefEq (← inferType proof) target)
+    let inst ← inferAddMonoidWithOne α
+    return .isNat inst lit proof
+end R7.Core.Gram.BasisNormNum

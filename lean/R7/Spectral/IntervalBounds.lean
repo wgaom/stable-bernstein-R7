@@ -1,5 +1,5 @@
-import R7.Spectral.CertificateTheorem
 import R7.Certificates.Spectral.Coefficients.All
+import R7.Spectral.CertificateTheorem
 
 namespace R7.Core.SpectralCertificateTheorem
 open R7.Core.SpectralCoefficient R7.Core.SpectralSource

@@ -3,6 +3,7 @@ import R7.Algebra.Covariance
 import R7.Spectral.Endpoint
 import R7.Spectral.Coordinates.Chart
 import R7.Spectral.Coordinates.Symmetry
+import Mathlib.Tactic.Convert
 
 noncomputable section
 namespace R7.Core.SpectralSource

@@ -17,8 +17,10 @@ def project (p : BiPoly) (j : ℕ) : Univariate.Poly := p.map (fun a => a[j]?.ge
 def flattenCoefficients (β : GapExponent) : ℕ → Univariate.Poly → KeyPoly
  | _, [] => []
  | k, a::p =>
-   let e := Fin.cons k β
-   ⟨expCode e,e,a⟩ :: flattenCoefficients β (k+1) p
+   bif a == 0 then flattenCoefficients β (k+1) p
+   else
+     let e := Fin.cons k β
+     ⟨k + 32 * (β 0 + 32 * (β 1 + 32 * (β 2 + 32 * β 3))),e,a⟩ :: flattenCoefficients β (k+1) p
 
 def flattenGrouped (G : Groups) (j : ℕ) : KeyPoly :=
  G.flatMap (fun row => flattenCoefficients row.1 0 (project row.2 j))
@@ -30,14 +32,19 @@ def flattenGrouped (G : Groups) (j : ℕ) : KeyPoly :=
  induction p generalizing k with
  | nil => simp [flattenCoefficients,interpretKey,evaluate]
  | cons a p ih =>
-   simp only [flattenCoefficients,interpretKey,map_add,MvPolynomial.aeval_monomial,
-     Finsupp.prod_pow,Fin.prod_univ_succ]
-   simp only [exponent,point,Fin.cons_zero,Fin.cons_succ]
-   change (a : ℝ)*(u^k * gapMonomial β g) +
-     MvPolynomial.aeval (point u g) (interpretKey (flattenCoefficients β (k+1) p)) = _
-   rw [ih]
-   simp only [evaluate,pow_succ]
-   ring
+   simp only [flattenCoefficients, cond_eq_ite, beq_iff_eq]
+   by_cases ha : a = 0
+   · simp only [ha, ite_true]
+     rw [ih]
+     simp [evaluate, pow_succ, mul_assoc]
+   · simp only [ha, ite_false, interpretKey, map_add, MvPolynomial.aeval_monomial,
+       Finsupp.prod_pow, Fin.prod_univ_succ]
+     simp only [exponent, point, Fin.cons_zero, Fin.cons_succ]
+     change (a : ℝ)*(u^k * gapMonomial β g) +
+       MvPolynomial.aeval (point u g) (interpretKey (flattenCoefficients β (k+1) p)) = _
+     rw [ih]
+     simp only [evaluate,pow_succ]
+     ring
 
 @[simp] theorem evaluate_flattenGrouped (G : Groups) (j : ℕ) (u : ℝ) (g : Fin 4 → ℝ) :
  MvPolynomial.aeval (point u g) (interpretKey (flattenGrouped G j)) =

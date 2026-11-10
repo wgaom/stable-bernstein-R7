@@ -1,7 +1,13 @@
 import R7.Algebra.ComputablePolynomial
 import R7.Spectral.Coordinates.PolynomialChart
 import Mathlib.Algebra.MvPolynomial.Eval
-import Mathlib.Tactic
+import Mathlib.Data.Real.Basic
+import Mathlib.Algebra.Algebra.Rat
+import Mathlib.Data.Rat.Cast.Lemmas
+import Mathlib.Algebra.BigOperators.Fin
+import Mathlib.Tactic.Ring
+import Mathlib.Tactic.FinCases
+import Mathlib.Analysis.RCLike.Basic
 
 namespace R7.Core.SpectralPolynomial
 open scoped BigOperators

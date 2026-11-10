@@ -1,7 +1,9 @@
 import R7.Spectral.Coordinates.Representation
 import Mathlib.Data.Real.Sqrt
 import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Tactic
+import Mathlib.Tactic.NormNum
+import Mathlib.Tactic.NormNum.BigOperators
+import Mathlib.Tactic.Ring
 
 noncomputable section
 namespace R7.Core.Endpoint

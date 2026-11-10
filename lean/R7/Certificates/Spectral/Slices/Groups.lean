@@ -1,1628 +1,1629 @@
 import R7.Spectral.Grouped
 import R7.Certificates.Spectral.Slices.All
+set_option Elab.async false
 
 namespace R7.Core.SpectralCertificateTheorem
 open R7.Core.MinorCertificates R7.Core.SpectralGrouped R7.Core.SpectralSlices R7.Core.Bivariate
 set_option maxRecDepth 1000000
 set_option maxHeartbeats 0
-def entrySlice_0 : CertifiedSlice :=
+noncomputable def entrySlice_0 : CertifiedSlice :=
  ⟨![0,0,0,12], R7.Core.SpectralSliceCertificates.Entry000.polynomial_0, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry000.polynomial_0 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry000.positive_0 y u hy⟩
-def entrySlice_1 : CertifiedSlice :=
+noncomputable def entrySlice_1 : CertifiedSlice :=
  ⟨![0,0,1,11], R7.Core.SpectralSliceCertificates.Entry000.polynomial_1, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry000.polynomial_1 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry000.positive_1 y u hy⟩
-def entrySlice_2 : CertifiedSlice :=
+noncomputable def entrySlice_2 : CertifiedSlice :=
  ⟨![0,0,2,10], R7.Core.SpectralSliceCertificates.Entry000.polynomial_2, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry000.polynomial_2 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry000.positive_2 y u hy⟩
-def entrySlice_3 : CertifiedSlice :=
+noncomputable def entrySlice_3 : CertifiedSlice :=
  ⟨![0,0,3,9], R7.Core.SpectralSliceCertificates.Entry000.polynomial_3, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry000.polynomial_3 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry000.positive_3 y u hy⟩
-def entrySlice_4 : CertifiedSlice :=
+noncomputable def entrySlice_4 : CertifiedSlice :=
  ⟨![0,0,4,8], R7.Core.SpectralSliceCertificates.Entry000.polynomial_4, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry000.polynomial_4 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry000.positive_4 y u hy⟩
-def entrySlice_5 : CertifiedSlice :=
+noncomputable def entrySlice_5 : CertifiedSlice :=
  ⟨![0,0,5,7], R7.Core.SpectralSliceCertificates.Entry000.polynomial_5, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry000.polynomial_5 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry000.positive_5 y u hy⟩
-def entrySlice_6 : CertifiedSlice :=
+noncomputable def entrySlice_6 : CertifiedSlice :=
  ⟨![0,0,6,6], R7.Core.SpectralSliceCertificates.Entry001.polynomial_6, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry001.polynomial_6 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry001.positive_6 y u hy⟩
-def entrySlice_7 : CertifiedSlice :=
+noncomputable def entrySlice_7 : CertifiedSlice :=
  ⟨![0,0,7,5], R7.Core.SpectralSliceCertificates.Entry001.polynomial_7, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry001.polynomial_7 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry001.positive_7 y u hy⟩
-def entrySlice_8 : CertifiedSlice :=
+noncomputable def entrySlice_8 : CertifiedSlice :=
  ⟨![0,0,8,4], R7.Core.SpectralSliceCertificates.Entry001.polynomial_8, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry001.polynomial_8 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry001.positive_8 y u hy⟩
-def entrySlice_9 : CertifiedSlice :=
+noncomputable def entrySlice_9 : CertifiedSlice :=
  ⟨![0,0,9,3], R7.Core.SpectralSliceCertificates.Entry001.polynomial_9, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry001.polynomial_9 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry001.positive_9 y u hy⟩
-def entrySlice_10 : CertifiedSlice :=
+noncomputable def entrySlice_10 : CertifiedSlice :=
  ⟨![0,0,10,2], R7.Core.SpectralSliceCertificates.Entry001.polynomial_10, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry001.polynomial_10 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry001.positive_10 y u hy⟩
-def entrySlice_11 : CertifiedSlice :=
+noncomputable def entrySlice_11 : CertifiedSlice :=
  ⟨![0,0,11,1], R7.Core.SpectralSliceCertificates.Entry001.polynomial_11, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry001.polynomial_11 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry001.positive_11 y u hy⟩
-def entrySlice_12 : CertifiedSlice :=
+noncomputable def entrySlice_12 : CertifiedSlice :=
  ⟨![0,0,12,0], R7.Core.SpectralSliceCertificates.Entry002.polynomial_12, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry002.polynomial_12 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry002.positive_12 y u hy⟩
-def entrySlice_13 : CertifiedSlice :=
+noncomputable def entrySlice_13 : CertifiedSlice :=
  ⟨![0,1,0,11], R7.Core.SpectralSliceCertificates.Entry002.polynomial_13, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry002.polynomial_13 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry002.positive_13 y u hy⟩
-def entrySlice_14 : CertifiedSlice :=
+noncomputable def entrySlice_14 : CertifiedSlice :=
  ⟨![0,1,1,10], R7.Core.SpectralSliceCertificates.Entry002.polynomial_14, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry002.polynomial_14 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry002.positive_14 y u hy⟩
-def entrySlice_15 : CertifiedSlice :=
+noncomputable def entrySlice_15 : CertifiedSlice :=
  ⟨![0,1,2,9], R7.Core.SpectralSliceCertificates.Entry002.polynomial_15, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry002.polynomial_15 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry002.positive_15 y u hy⟩
-def entrySlice_16 : CertifiedSlice :=
+noncomputable def entrySlice_16 : CertifiedSlice :=
  ⟨![0,1,3,8], R7.Core.SpectralSliceCertificates.Entry002.polynomial_16, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry002.polynomial_16 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry002.positive_16 y u hy⟩
-def entrySlice_17 : CertifiedSlice :=
+noncomputable def entrySlice_17 : CertifiedSlice :=
  ⟨![0,1,4,7], R7.Core.SpectralSliceCertificates.Entry002.polynomial_17, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry002.polynomial_17 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry002.positive_17 y u hy⟩
-def entrySlice_18 : CertifiedSlice :=
+noncomputable def entrySlice_18 : CertifiedSlice :=
  ⟨![0,1,5,6], R7.Core.SpectralSliceCertificates.Entry003.polynomial_18, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry003.polynomial_18 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry003.positive_18 y u hy⟩
-def entrySlice_19 : CertifiedSlice :=
+noncomputable def entrySlice_19 : CertifiedSlice :=
  ⟨![0,1,6,5], R7.Core.SpectralSliceCertificates.Entry003.polynomial_19, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry003.polynomial_19 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry003.positive_19 y u hy⟩
-def entrySlice_20 : CertifiedSlice :=
+noncomputable def entrySlice_20 : CertifiedSlice :=
  ⟨![0,1,7,4], R7.Core.SpectralSliceCertificates.Entry003.polynomial_20, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry003.polynomial_20 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry003.positive_20 y u hy⟩
-def entrySlice_21 : CertifiedSlice :=
+noncomputable def entrySlice_21 : CertifiedSlice :=
  ⟨![0,1,8,3], R7.Core.SpectralSliceCertificates.Entry003.polynomial_21, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry003.polynomial_21 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry003.positive_21 y u hy⟩
-def entrySlice_22 : CertifiedSlice :=
+noncomputable def entrySlice_22 : CertifiedSlice :=
  ⟨![0,1,9,2], R7.Core.SpectralSliceCertificates.Entry003.polynomial_22, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry003.polynomial_22 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry003.positive_22 y u hy⟩
-def entrySlice_23 : CertifiedSlice :=
+noncomputable def entrySlice_23 : CertifiedSlice :=
  ⟨![0,1,10,1], R7.Core.SpectralSliceCertificates.Entry003.polynomial_23, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry003.polynomial_23 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry003.positive_23 y u hy⟩
-def entrySlice_24 : CertifiedSlice :=
+noncomputable def entrySlice_24 : CertifiedSlice :=
  ⟨![0,1,11,0], R7.Core.SpectralSliceCertificates.Entry004.polynomial_24, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry004.polynomial_24 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry004.positive_24 y u hy⟩
-def entrySlice_25 : CertifiedSlice :=
+noncomputable def entrySlice_25 : CertifiedSlice :=
  ⟨![0,2,0,10], R7.Core.SpectralSliceCertificates.Entry004.polynomial_25, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry004.polynomial_25 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry004.positive_25 y u hy⟩
-def entrySlice_26 : CertifiedSlice :=
+noncomputable def entrySlice_26 : CertifiedSlice :=
  ⟨![0,2,1,9], R7.Core.SpectralSliceCertificates.Entry004.polynomial_26, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry004.polynomial_26 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry004.positive_26 y u hy⟩
-def entrySlice_27 : CertifiedSlice :=
+noncomputable def entrySlice_27 : CertifiedSlice :=
  ⟨![0,2,2,8], R7.Core.SpectralSliceCertificates.Entry004.polynomial_27, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry004.polynomial_27 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry004.positive_27 y u hy⟩
-def entrySlice_28 : CertifiedSlice :=
+noncomputable def entrySlice_28 : CertifiedSlice :=
  ⟨![0,2,3,7], R7.Core.SpectralSliceCertificates.Entry004.polynomial_28, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry004.polynomial_28 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry004.positive_28 y u hy⟩
-def entrySlice_29 : CertifiedSlice :=
+noncomputable def entrySlice_29 : CertifiedSlice :=
  ⟨![0,2,4,6], R7.Core.SpectralSliceCertificates.Entry004.polynomial_29, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry004.polynomial_29 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry004.positive_29 y u hy⟩
-def entrySlice_30 : CertifiedSlice :=
+noncomputable def entrySlice_30 : CertifiedSlice :=
  ⟨![0,2,5,5], R7.Core.SpectralSliceCertificates.Entry005.polynomial_30, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry005.polynomial_30 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry005.positive_30 y u hy⟩
-def entrySlice_31 : CertifiedSlice :=
+noncomputable def entrySlice_31 : CertifiedSlice :=
  ⟨![0,2,6,4], R7.Core.SpectralSliceCertificates.Entry005.polynomial_31, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry005.polynomial_31 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry005.positive_31 y u hy⟩
-def entrySlice_32 : CertifiedSlice :=
+noncomputable def entrySlice_32 : CertifiedSlice :=
  ⟨![0,2,7,3], R7.Core.SpectralSliceCertificates.Entry005.polynomial_32, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry005.polynomial_32 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry005.positive_32 y u hy⟩
-def entrySlice_33 : CertifiedSlice :=
+noncomputable def entrySlice_33 : CertifiedSlice :=
  ⟨![0,2,8,2], R7.Core.SpectralSliceCertificates.Entry005.polynomial_33, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry005.polynomial_33 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry005.positive_33 y u hy⟩
-def entrySlice_34 : CertifiedSlice :=
+noncomputable def entrySlice_34 : CertifiedSlice :=
  ⟨![0,2,9,1], R7.Core.SpectralSliceCertificates.Entry005.polynomial_34, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry005.polynomial_34 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry005.positive_34 y u hy⟩
-def entrySlice_35 : CertifiedSlice :=
+noncomputable def entrySlice_35 : CertifiedSlice :=
  ⟨![0,2,10,0], R7.Core.SpectralSliceCertificates.Entry005.polynomial_35, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry005.polynomial_35 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry005.positive_35 y u hy⟩
-def entrySlice_36 : CertifiedSlice :=
+noncomputable def entrySlice_36 : CertifiedSlice :=
  ⟨![0,3,0,9], R7.Core.SpectralSliceCertificates.Entry006.polynomial_36, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry006.polynomial_36 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry006.positive_36 y u hy⟩
-def entrySlice_37 : CertifiedSlice :=
+noncomputable def entrySlice_37 : CertifiedSlice :=
  ⟨![0,3,1,8], R7.Core.SpectralSliceCertificates.Entry006.polynomial_37, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry006.polynomial_37 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry006.positive_37 y u hy⟩
-def entrySlice_38 : CertifiedSlice :=
+noncomputable def entrySlice_38 : CertifiedSlice :=
  ⟨![0,3,2,7], R7.Core.SpectralSliceCertificates.Entry006.polynomial_38, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry006.polynomial_38 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry006.positive_38 y u hy⟩
-def entrySlice_39 : CertifiedSlice :=
+noncomputable def entrySlice_39 : CertifiedSlice :=
  ⟨![0,3,3,6], R7.Core.SpectralSliceCertificates.Entry006.polynomial_39, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry006.polynomial_39 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry006.positive_39 y u hy⟩
-def entrySlice_40 : CertifiedSlice :=
+noncomputable def entrySlice_40 : CertifiedSlice :=
  ⟨![0,3,4,5], R7.Core.SpectralSliceCertificates.Entry006.polynomial_40, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry006.polynomial_40 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry006.positive_40 y u hy⟩
-def entrySlice_41 : CertifiedSlice :=
+noncomputable def entrySlice_41 : CertifiedSlice :=
  ⟨![0,3,5,4], R7.Core.SpectralSliceCertificates.Entry006.polynomial_41, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry006.polynomial_41 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry006.positive_41 y u hy⟩
-def entrySlice_42 : CertifiedSlice :=
+noncomputable def entrySlice_42 : CertifiedSlice :=
  ⟨![0,3,6,3], R7.Core.SpectralSliceCertificates.Entry007.polynomial_42, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry007.polynomial_42 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry007.positive_42 y u hy⟩
-def entrySlice_43 : CertifiedSlice :=
+noncomputable def entrySlice_43 : CertifiedSlice :=
  ⟨![0,3,7,2], R7.Core.SpectralSliceCertificates.Entry007.polynomial_43, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry007.polynomial_43 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry007.positive_43 y u hy⟩
-def entrySlice_44 : CertifiedSlice :=
+noncomputable def entrySlice_44 : CertifiedSlice :=
  ⟨![0,3,8,1], R7.Core.SpectralSliceCertificates.Entry007.polynomial_44, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry007.polynomial_44 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry007.positive_44 y u hy⟩
-def entrySlice_45 : CertifiedSlice :=
+noncomputable def entrySlice_45 : CertifiedSlice :=
  ⟨![0,3,9,0], R7.Core.SpectralSliceCertificates.Entry007.polynomial_45, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry007.polynomial_45 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry007.positive_45 y u hy⟩
-def entrySlice_46 : CertifiedSlice :=
+noncomputable def entrySlice_46 : CertifiedSlice :=
  ⟨![0,4,0,8], R7.Core.SpectralSliceCertificates.Entry007.polynomial_46, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry007.polynomial_46 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry007.positive_46 y u hy⟩
-def entrySlice_47 : CertifiedSlice :=
+noncomputable def entrySlice_47 : CertifiedSlice :=
  ⟨![0,4,1,7], R7.Core.SpectralSliceCertificates.Entry007.polynomial_47, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry007.polynomial_47 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry007.positive_47 y u hy⟩
-def entrySlice_48 : CertifiedSlice :=
+noncomputable def entrySlice_48 : CertifiedSlice :=
  ⟨![0,4,2,6], R7.Core.SpectralSliceCertificates.Entry008.polynomial_48, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry008.polynomial_48 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry008.positive_48 y u hy⟩
-def entrySlice_49 : CertifiedSlice :=
+noncomputable def entrySlice_49 : CertifiedSlice :=
  ⟨![0,4,3,5], R7.Core.SpectralSliceCertificates.Entry008.polynomial_49, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry008.polynomial_49 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry008.positive_49 y u hy⟩
-def entrySlice_50 : CertifiedSlice :=
+noncomputable def entrySlice_50 : CertifiedSlice :=
  ⟨![0,4,4,4], R7.Core.SpectralSliceCertificates.Entry008.polynomial_50, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry008.polynomial_50 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry008.positive_50 y u hy⟩
-def entrySlice_51 : CertifiedSlice :=
+noncomputable def entrySlice_51 : CertifiedSlice :=
  ⟨![0,4,5,3], R7.Core.SpectralSliceCertificates.Entry008.polynomial_51, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry008.polynomial_51 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry008.positive_51 y u hy⟩
-def entrySlice_52 : CertifiedSlice :=
+noncomputable def entrySlice_52 : CertifiedSlice :=
  ⟨![0,4,6,2], R7.Core.SpectralSliceCertificates.Entry008.polynomial_52, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry008.polynomial_52 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry008.positive_52 y u hy⟩
-def entrySlice_53 : CertifiedSlice :=
+noncomputable def entrySlice_53 : CertifiedSlice :=
  ⟨![0,4,7,1], R7.Core.SpectralSliceCertificates.Entry008.polynomial_53, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry008.polynomial_53 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry008.positive_53 y u hy⟩
-def entrySlice_54 : CertifiedSlice :=
+noncomputable def entrySlice_54 : CertifiedSlice :=
  ⟨![0,4,8,0], R7.Core.SpectralSliceCertificates.Entry009.polynomial_54, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry009.polynomial_54 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry009.positive_54 y u hy⟩
-def entrySlice_55 : CertifiedSlice :=
+noncomputable def entrySlice_55 : CertifiedSlice :=
  ⟨![0,5,0,7], R7.Core.SpectralSliceCertificates.Entry009.polynomial_55, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry009.polynomial_55 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry009.positive_55 y u hy⟩
-def entrySlice_56 : CertifiedSlice :=
+noncomputable def entrySlice_56 : CertifiedSlice :=
  ⟨![0,5,1,6], R7.Core.SpectralSliceCertificates.Entry009.polynomial_56, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry009.polynomial_56 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry009.positive_56 y u hy⟩
-def entrySlice_57 : CertifiedSlice :=
+noncomputable def entrySlice_57 : CertifiedSlice :=
  ⟨![0,5,2,5], R7.Core.SpectralSliceCertificates.Entry009.polynomial_57, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry009.polynomial_57 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry009.positive_57 y u hy⟩
-def entrySlice_58 : CertifiedSlice :=
+noncomputable def entrySlice_58 : CertifiedSlice :=
  ⟨![0,5,3,4], R7.Core.SpectralSliceCertificates.Entry009.polynomial_58, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry009.polynomial_58 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry009.positive_58 y u hy⟩
-def entrySlice_59 : CertifiedSlice :=
+noncomputable def entrySlice_59 : CertifiedSlice :=
  ⟨![0,5,4,3], R7.Core.SpectralSliceCertificates.Entry009.polynomial_59, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry009.polynomial_59 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry009.positive_59 y u hy⟩
-def entrySlice_60 : CertifiedSlice :=
+noncomputable def entrySlice_60 : CertifiedSlice :=
  ⟨![0,5,5,2], R7.Core.SpectralSliceCertificates.Entry010.polynomial_60, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry010.polynomial_60 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry010.positive_60 y u hy⟩
-def entrySlice_61 : CertifiedSlice :=
+noncomputable def entrySlice_61 : CertifiedSlice :=
  ⟨![0,5,6,1], R7.Core.SpectralSliceCertificates.Entry010.polynomial_61, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry010.polynomial_61 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry010.positive_61 y u hy⟩
-def entrySlice_62 : CertifiedSlice :=
+noncomputable def entrySlice_62 : CertifiedSlice :=
  ⟨![0,5,7,0], R7.Core.SpectralSliceCertificates.Entry010.polynomial_62, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry010.polynomial_62 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry010.positive_62 y u hy⟩
-def entrySlice_63 : CertifiedSlice :=
+noncomputable def entrySlice_63 : CertifiedSlice :=
  ⟨![0,6,0,6], R7.Core.SpectralSliceCertificates.Entry010.polynomial_63, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry010.polynomial_63 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry010.positive_63 y u hy⟩
-def entrySlice_64 : CertifiedSlice :=
+noncomputable def entrySlice_64 : CertifiedSlice :=
  ⟨![0,6,1,5], R7.Core.SpectralSliceCertificates.Entry010.polynomial_64, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry010.polynomial_64 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry010.positive_64 y u hy⟩
-def entrySlice_65 : CertifiedSlice :=
+noncomputable def entrySlice_65 : CertifiedSlice :=
  ⟨![0,6,2,4], R7.Core.SpectralSliceCertificates.Entry010.polynomial_65, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry010.polynomial_65 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry010.positive_65 y u hy⟩
-def entrySlice_66 : CertifiedSlice :=
+noncomputable def entrySlice_66 : CertifiedSlice :=
  ⟨![0,6,3,3], R7.Core.SpectralSliceCertificates.Entry011.polynomial_66, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry011.polynomial_66 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry011.positive_66 y u hy⟩
-def entrySlice_67 : CertifiedSlice :=
+noncomputable def entrySlice_67 : CertifiedSlice :=
  ⟨![0,6,4,2], R7.Core.SpectralSliceCertificates.Entry011.polynomial_67, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry011.polynomial_67 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry011.positive_67 y u hy⟩
-def entrySlice_68 : CertifiedSlice :=
+noncomputable def entrySlice_68 : CertifiedSlice :=
  ⟨![0,6,5,1], R7.Core.SpectralSliceCertificates.Entry011.polynomial_68, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry011.polynomial_68 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry011.positive_68 y u hy⟩
-def entrySlice_69 : CertifiedSlice :=
+noncomputable def entrySlice_69 : CertifiedSlice :=
  ⟨![0,6,6,0], R7.Core.SpectralSliceCertificates.Entry011.polynomial_69, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry011.polynomial_69 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry011.positive_69 y u hy⟩
-def entrySlice_70 : CertifiedSlice :=
+noncomputable def entrySlice_70 : CertifiedSlice :=
  ⟨![0,7,0,5], R7.Core.SpectralSliceCertificates.Entry011.polynomial_70, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry011.polynomial_70 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry011.positive_70 y u hy⟩
-def entrySlice_71 : CertifiedSlice :=
+noncomputable def entrySlice_71 : CertifiedSlice :=
  ⟨![0,7,1,4], R7.Core.SpectralSliceCertificates.Entry011.polynomial_71, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry011.polynomial_71 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry011.positive_71 y u hy⟩
-def entrySlice_72 : CertifiedSlice :=
+noncomputable def entrySlice_72 : CertifiedSlice :=
  ⟨![0,7,2,3], R7.Core.SpectralSliceCertificates.Entry012.polynomial_72, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry012.polynomial_72 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry012.positive_72 y u hy⟩
-def entrySlice_73 : CertifiedSlice :=
+noncomputable def entrySlice_73 : CertifiedSlice :=
  ⟨![0,7,3,2], R7.Core.SpectralSliceCertificates.Entry012.polynomial_73, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry012.polynomial_73 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry012.positive_73 y u hy⟩
-def entrySlice_74 : CertifiedSlice :=
+noncomputable def entrySlice_74 : CertifiedSlice :=
  ⟨![0,7,4,1], R7.Core.SpectralSliceCertificates.Entry012.polynomial_74, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry012.polynomial_74 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry012.positive_74 y u hy⟩
-def entrySlice_75 : CertifiedSlice :=
+noncomputable def entrySlice_75 : CertifiedSlice :=
  ⟨![0,8,0,4], R7.Core.SpectralSliceCertificates.Entry012.polynomial_75, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry012.polynomial_75 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry012.positive_75 y u hy⟩
-def entrySlice_76 : CertifiedSlice :=
+noncomputable def entrySlice_76 : CertifiedSlice :=
  ⟨![0,8,1,3], R7.Core.SpectralSliceCertificates.Entry012.polynomial_76, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry012.polynomial_76 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry012.positive_76 y u hy⟩
-def entrySlice_77 : CertifiedSlice :=
+noncomputable def entrySlice_77 : CertifiedSlice :=
  ⟨![0,8,2,2], R7.Core.SpectralSliceCertificates.Entry012.polynomial_77, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry012.polynomial_77 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry012.positive_77 y u hy⟩
-def entrySlice_78 : CertifiedSlice :=
+noncomputable def entrySlice_78 : CertifiedSlice :=
  ⟨![0,8,3,1], R7.Core.SpectralSliceCertificates.Entry013.polynomial_78, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry013.polynomial_78 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry013.positive_78 y u hy⟩
-def entrySlice_79 : CertifiedSlice :=
+noncomputable def entrySlice_79 : CertifiedSlice :=
  ⟨![0,9,0,3], R7.Core.SpectralSliceCertificates.Entry013.polynomial_79, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry013.polynomial_79 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry013.positive_79 y u hy⟩
-def entrySlice_80 : CertifiedSlice :=
+noncomputable def entrySlice_80 : CertifiedSlice :=
  ⟨![0,9,1,2], R7.Core.SpectralSliceCertificates.Entry013.polynomial_80, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry013.polynomial_80 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry013.positive_80 y u hy⟩
-def entrySlice_81 : CertifiedSlice :=
+noncomputable def entrySlice_81 : CertifiedSlice :=
  ⟨![0,9,2,1], R7.Core.SpectralSliceCertificates.Entry013.polynomial_81, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry013.polynomial_81 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry013.positive_81 y u hy⟩
-def entrySlice_82 : CertifiedSlice :=
+noncomputable def entrySlice_82 : CertifiedSlice :=
  ⟨![0,10,0,2], R7.Core.SpectralSliceCertificates.Entry013.polynomial_82, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry013.polynomial_82 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry013.positive_82 y u hy⟩
-def entrySlice_83 : CertifiedSlice :=
+noncomputable def entrySlice_83 : CertifiedSlice :=
  ⟨![0,10,1,1], R7.Core.SpectralSliceCertificates.Entry013.polynomial_83, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry013.polynomial_83 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry013.positive_83 y u hy⟩
-def entrySlice_84 : CertifiedSlice :=
+noncomputable def entrySlice_84 : CertifiedSlice :=
  ⟨![0,11,0,1], R7.Core.SpectralSliceCertificates.Entry014.polynomial_84, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry014.polynomial_84 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry014.positive_84 y u hy⟩
-def entrySlice_85 : CertifiedSlice :=
+noncomputable def entrySlice_85 : CertifiedSlice :=
  ⟨![1,0,0,11], R7.Core.SpectralSliceCertificates.Entry014.polynomial_85, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry014.polynomial_85 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry014.positive_85 y u hy⟩
-def entrySlice_86 : CertifiedSlice :=
+noncomputable def entrySlice_86 : CertifiedSlice :=
  ⟨![1,0,1,10], R7.Core.SpectralSliceCertificates.Entry014.polynomial_86, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry014.polynomial_86 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry014.positive_86 y u hy⟩
-def entrySlice_87 : CertifiedSlice :=
+noncomputable def entrySlice_87 : CertifiedSlice :=
  ⟨![1,0,2,9], R7.Core.SpectralSliceCertificates.Entry014.polynomial_87, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry014.polynomial_87 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry014.positive_87 y u hy⟩
-def entrySlice_88 : CertifiedSlice :=
+noncomputable def entrySlice_88 : CertifiedSlice :=
  ⟨![1,0,3,8], R7.Core.SpectralSliceCertificates.Entry014.polynomial_88, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry014.polynomial_88 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry014.positive_88 y u hy⟩
-def entrySlice_89 : CertifiedSlice :=
+noncomputable def entrySlice_89 : CertifiedSlice :=
  ⟨![1,0,4,7], R7.Core.SpectralSliceCertificates.Entry014.polynomial_89, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry014.polynomial_89 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry014.positive_89 y u hy⟩
-def entrySlice_90 : CertifiedSlice :=
+noncomputable def entrySlice_90 : CertifiedSlice :=
  ⟨![1,0,5,6], R7.Core.SpectralSliceCertificates.Entry015.polynomial_90, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry015.polynomial_90 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry015.positive_90 y u hy⟩
-def entrySlice_91 : CertifiedSlice :=
+noncomputable def entrySlice_91 : CertifiedSlice :=
  ⟨![1,0,6,5], R7.Core.SpectralSliceCertificates.Entry015.polynomial_91, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry015.polynomial_91 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry015.positive_91 y u hy⟩
-def entrySlice_92 : CertifiedSlice :=
+noncomputable def entrySlice_92 : CertifiedSlice :=
  ⟨![1,0,7,4], R7.Core.SpectralSliceCertificates.Entry015.polynomial_92, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry015.polynomial_92 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry015.positive_92 y u hy⟩
-def entrySlice_93 : CertifiedSlice :=
+noncomputable def entrySlice_93 : CertifiedSlice :=
  ⟨![1,0,8,3], R7.Core.SpectralSliceCertificates.Entry015.polynomial_93, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry015.polynomial_93 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry015.positive_93 y u hy⟩
-def entrySlice_94 : CertifiedSlice :=
+noncomputable def entrySlice_94 : CertifiedSlice :=
  ⟨![1,0,9,2], R7.Core.SpectralSliceCertificates.Entry015.polynomial_94, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry015.polynomial_94 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry015.positive_94 y u hy⟩
-def entrySlice_95 : CertifiedSlice :=
+noncomputable def entrySlice_95 : CertifiedSlice :=
  ⟨![1,0,10,1], R7.Core.SpectralSliceCertificates.Entry015.polynomial_95, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry015.polynomial_95 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry015.positive_95 y u hy⟩
-def entrySlice_96 : CertifiedSlice :=
+noncomputable def entrySlice_96 : CertifiedSlice :=
  ⟨![1,1,0,10], R7.Core.SpectralSliceCertificates.Entry016.polynomial_96, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry016.polynomial_96 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry016.positive_96 y u hy⟩
-def entrySlice_97 : CertifiedSlice :=
+noncomputable def entrySlice_97 : CertifiedSlice :=
  ⟨![1,1,1,9], R7.Core.SpectralSliceCertificates.Entry016.polynomial_97, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry016.polynomial_97 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry016.positive_97 y u hy⟩
-def entrySlice_98 : CertifiedSlice :=
+noncomputable def entrySlice_98 : CertifiedSlice :=
  ⟨![1,1,2,8], R7.Core.SpectralSliceCertificates.Entry016.polynomial_98, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry016.polynomial_98 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry016.positive_98 y u hy⟩
-def entrySlice_99 : CertifiedSlice :=
+noncomputable def entrySlice_99 : CertifiedSlice :=
  ⟨![1,1,3,7], R7.Core.SpectralSliceCertificates.Entry016.polynomial_99, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry016.polynomial_99 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry016.positive_99 y u hy⟩
-def entrySlice_100 : CertifiedSlice :=
+noncomputable def entrySlice_100 : CertifiedSlice :=
  ⟨![1,1,4,6], R7.Core.SpectralSliceCertificates.Entry016.polynomial_100, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry016.polynomial_100 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry016.positive_100 y u hy⟩
-def entrySlice_101 : CertifiedSlice :=
+noncomputable def entrySlice_101 : CertifiedSlice :=
  ⟨![1,1,5,5], R7.Core.SpectralSliceCertificates.Entry016.polynomial_101, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry016.polynomial_101 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry016.positive_101 y u hy⟩
-def entrySlice_102 : CertifiedSlice :=
+noncomputable def entrySlice_102 : CertifiedSlice :=
  ⟨![1,1,6,4], R7.Core.SpectralSliceCertificates.Entry017.polynomial_102, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry017.polynomial_102 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry017.positive_102 y u hy⟩
-def entrySlice_103 : CertifiedSlice :=
+noncomputable def entrySlice_103 : CertifiedSlice :=
  ⟨![1,1,7,3], R7.Core.SpectralSliceCertificates.Entry017.polynomial_103, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry017.polynomial_103 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry017.positive_103 y u hy⟩
-def entrySlice_104 : CertifiedSlice :=
+noncomputable def entrySlice_104 : CertifiedSlice :=
  ⟨![1,1,8,2], R7.Core.SpectralSliceCertificates.Entry017.polynomial_104, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry017.polynomial_104 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry017.positive_104 y u hy⟩
-def entrySlice_105 : CertifiedSlice :=
+noncomputable def entrySlice_105 : CertifiedSlice :=
  ⟨![1,1,9,1], R7.Core.SpectralSliceCertificates.Entry017.polynomial_105, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry017.polynomial_105 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry017.positive_105 y u hy⟩
-def entrySlice_106 : CertifiedSlice :=
+noncomputable def entrySlice_106 : CertifiedSlice :=
  ⟨![1,2,0,9], R7.Core.SpectralSliceCertificates.Entry017.polynomial_106, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry017.polynomial_106 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry017.positive_106 y u hy⟩
-def entrySlice_107 : CertifiedSlice :=
+noncomputable def entrySlice_107 : CertifiedSlice :=
  ⟨![1,2,1,8], R7.Core.SpectralSliceCertificates.Entry017.polynomial_107, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry017.polynomial_107 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry017.positive_107 y u hy⟩
-def entrySlice_108 : CertifiedSlice :=
+noncomputable def entrySlice_108 : CertifiedSlice :=
  ⟨![1,2,2,7], R7.Core.SpectralSliceCertificates.Entry018.polynomial_108, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry018.polynomial_108 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry018.positive_108 y u hy⟩
-def entrySlice_109 : CertifiedSlice :=
+noncomputable def entrySlice_109 : CertifiedSlice :=
  ⟨![1,2,3,6], R7.Core.SpectralSliceCertificates.Entry018.polynomial_109, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry018.polynomial_109 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry018.positive_109 y u hy⟩
-def entrySlice_110 : CertifiedSlice :=
+noncomputable def entrySlice_110 : CertifiedSlice :=
  ⟨![1,2,4,5], R7.Core.SpectralSliceCertificates.Entry018.polynomial_110, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry018.polynomial_110 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry018.positive_110 y u hy⟩
-def entrySlice_111 : CertifiedSlice :=
+noncomputable def entrySlice_111 : CertifiedSlice :=
  ⟨![1,2,5,4], R7.Core.SpectralSliceCertificates.Entry018.polynomial_111, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry018.polynomial_111 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry018.positive_111 y u hy⟩
-def entrySlice_112 : CertifiedSlice :=
+noncomputable def entrySlice_112 : CertifiedSlice :=
  ⟨![1,2,6,3], R7.Core.SpectralSliceCertificates.Entry018.polynomial_112, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry018.polynomial_112 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry018.positive_112 y u hy⟩
-def entrySlice_113 : CertifiedSlice :=
+noncomputable def entrySlice_113 : CertifiedSlice :=
  ⟨![1,2,7,2], R7.Core.SpectralSliceCertificates.Entry018.polynomial_113, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry018.polynomial_113 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry018.positive_113 y u hy⟩
-def entrySlice_114 : CertifiedSlice :=
+noncomputable def entrySlice_114 : CertifiedSlice :=
  ⟨![1,2,8,1], R7.Core.SpectralSliceCertificates.Entry019.polynomial_114, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry019.polynomial_114 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry019.positive_114 y u hy⟩
-def entrySlice_115 : CertifiedSlice :=
+noncomputable def entrySlice_115 : CertifiedSlice :=
  ⟨![1,3,0,8], R7.Core.SpectralSliceCertificates.Entry019.polynomial_115, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry019.polynomial_115 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry019.positive_115 y u hy⟩
-def entrySlice_116 : CertifiedSlice :=
+noncomputable def entrySlice_116 : CertifiedSlice :=
  ⟨![1,3,1,7], R7.Core.SpectralSliceCertificates.Entry019.polynomial_116, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry019.polynomial_116 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry019.positive_116 y u hy⟩
-def entrySlice_117 : CertifiedSlice :=
+noncomputable def entrySlice_117 : CertifiedSlice :=
  ⟨![1,3,2,6], R7.Core.SpectralSliceCertificates.Entry019.polynomial_117, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry019.polynomial_117 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry019.positive_117 y u hy⟩
-def entrySlice_118 : CertifiedSlice :=
+noncomputable def entrySlice_118 : CertifiedSlice :=
  ⟨![1,3,3,5], R7.Core.SpectralSliceCertificates.Entry019.polynomial_118, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry019.polynomial_118 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry019.positive_118 y u hy⟩
-def entrySlice_119 : CertifiedSlice :=
+noncomputable def entrySlice_119 : CertifiedSlice :=
  ⟨![1,3,4,4], R7.Core.SpectralSliceCertificates.Entry019.polynomial_119, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry019.polynomial_119 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry019.positive_119 y u hy⟩
-def entrySlice_120 : CertifiedSlice :=
+noncomputable def entrySlice_120 : CertifiedSlice :=
  ⟨![1,3,5,3], R7.Core.SpectralSliceCertificates.Entry020.polynomial_120, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry020.polynomial_120 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry020.positive_120 y u hy⟩
-def entrySlice_121 : CertifiedSlice :=
+noncomputable def entrySlice_121 : CertifiedSlice :=
  ⟨![1,3,6,2], R7.Core.SpectralSliceCertificates.Entry020.polynomial_121, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry020.polynomial_121 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry020.positive_121 y u hy⟩
-def entrySlice_122 : CertifiedSlice :=
+noncomputable def entrySlice_122 : CertifiedSlice :=
  ⟨![1,3,7,1], R7.Core.SpectralSliceCertificates.Entry020.polynomial_122, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry020.polynomial_122 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry020.positive_122 y u hy⟩
-def entrySlice_123 : CertifiedSlice :=
+noncomputable def entrySlice_123 : CertifiedSlice :=
  ⟨![1,4,0,7], R7.Core.SpectralSliceCertificates.Entry020.polynomial_123, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry020.polynomial_123 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry020.positive_123 y u hy⟩
-def entrySlice_124 : CertifiedSlice :=
+noncomputable def entrySlice_124 : CertifiedSlice :=
  ⟨![1,4,1,6], R7.Core.SpectralSliceCertificates.Entry020.polynomial_124, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry020.polynomial_124 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry020.positive_124 y u hy⟩
-def entrySlice_125 : CertifiedSlice :=
+noncomputable def entrySlice_125 : CertifiedSlice :=
  ⟨![1,4,2,5], R7.Core.SpectralSliceCertificates.Entry020.polynomial_125, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry020.polynomial_125 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry020.positive_125 y u hy⟩
-def entrySlice_126 : CertifiedSlice :=
+noncomputable def entrySlice_126 : CertifiedSlice :=
  ⟨![1,4,3,4], R7.Core.SpectralSliceCertificates.Entry021.polynomial_126, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry021.polynomial_126 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry021.positive_126 y u hy⟩
-def entrySlice_127 : CertifiedSlice :=
+noncomputable def entrySlice_127 : CertifiedSlice :=
  ⟨![1,4,4,3], R7.Core.SpectralSliceCertificates.Entry021.polynomial_127, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry021.polynomial_127 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry021.positive_127 y u hy⟩
-def entrySlice_128 : CertifiedSlice :=
+noncomputable def entrySlice_128 : CertifiedSlice :=
  ⟨![1,4,5,2], R7.Core.SpectralSliceCertificates.Entry021.polynomial_128, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry021.polynomial_128 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry021.positive_128 y u hy⟩
-def entrySlice_129 : CertifiedSlice :=
+noncomputable def entrySlice_129 : CertifiedSlice :=
  ⟨![1,4,6,1], R7.Core.SpectralSliceCertificates.Entry021.polynomial_129, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry021.polynomial_129 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry021.positive_129 y u hy⟩
-def entrySlice_130 : CertifiedSlice :=
+noncomputable def entrySlice_130 : CertifiedSlice :=
  ⟨![1,5,0,6], R7.Core.SpectralSliceCertificates.Entry021.polynomial_130, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry021.polynomial_130 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry021.positive_130 y u hy⟩
-def entrySlice_131 : CertifiedSlice :=
+noncomputable def entrySlice_131 : CertifiedSlice :=
  ⟨![1,5,1,5], R7.Core.SpectralSliceCertificates.Entry021.polynomial_131, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry021.polynomial_131 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry021.positive_131 y u hy⟩
-def entrySlice_132 : CertifiedSlice :=
+noncomputable def entrySlice_132 : CertifiedSlice :=
  ⟨![1,5,2,4], R7.Core.SpectralSliceCertificates.Entry022.polynomial_132, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry022.polynomial_132 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry022.positive_132 y u hy⟩
-def entrySlice_133 : CertifiedSlice :=
+noncomputable def entrySlice_133 : CertifiedSlice :=
  ⟨![1,5,3,3], R7.Core.SpectralSliceCertificates.Entry022.polynomial_133, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry022.polynomial_133 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry022.positive_133 y u hy⟩
-def entrySlice_134 : CertifiedSlice :=
+noncomputable def entrySlice_134 : CertifiedSlice :=
  ⟨![1,5,4,2], R7.Core.SpectralSliceCertificates.Entry022.polynomial_134, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry022.polynomial_134 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry022.positive_134 y u hy⟩
-def entrySlice_135 : CertifiedSlice :=
+noncomputable def entrySlice_135 : CertifiedSlice :=
  ⟨![1,5,5,1], R7.Core.SpectralSliceCertificates.Entry022.polynomial_135, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry022.polynomial_135 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry022.positive_135 y u hy⟩
-def entrySlice_136 : CertifiedSlice :=
+noncomputable def entrySlice_136 : CertifiedSlice :=
  ⟨![1,6,0,5], R7.Core.SpectralSliceCertificates.Entry022.polynomial_136, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry022.polynomial_136 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry022.positive_136 y u hy⟩
-def entrySlice_137 : CertifiedSlice :=
+noncomputable def entrySlice_137 : CertifiedSlice :=
  ⟨![1,6,1,4], R7.Core.SpectralSliceCertificates.Entry022.polynomial_137, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry022.polynomial_137 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry022.positive_137 y u hy⟩
-def entrySlice_138 : CertifiedSlice :=
+noncomputable def entrySlice_138 : CertifiedSlice :=
  ⟨![1,6,2,3], R7.Core.SpectralSliceCertificates.Entry023.polynomial_138, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry023.polynomial_138 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry023.positive_138 y u hy⟩
-def entrySlice_139 : CertifiedSlice :=
+noncomputable def entrySlice_139 : CertifiedSlice :=
  ⟨![1,6,3,2], R7.Core.SpectralSliceCertificates.Entry023.polynomial_139, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry023.polynomial_139 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry023.positive_139 y u hy⟩
-def entrySlice_140 : CertifiedSlice :=
+noncomputable def entrySlice_140 : CertifiedSlice :=
  ⟨![1,7,0,4], R7.Core.SpectralSliceCertificates.Entry023.polynomial_140, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry023.polynomial_140 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry023.positive_140 y u hy⟩
-def entrySlice_141 : CertifiedSlice :=
+noncomputable def entrySlice_141 : CertifiedSlice :=
  ⟨![1,7,1,3], R7.Core.SpectralSliceCertificates.Entry023.polynomial_141, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry023.polynomial_141 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry023.positive_141 y u hy⟩
-def entrySlice_142 : CertifiedSlice :=
+noncomputable def entrySlice_142 : CertifiedSlice :=
  ⟨![1,7,2,2], R7.Core.SpectralSliceCertificates.Entry023.polynomial_142, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry023.polynomial_142 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry023.positive_142 y u hy⟩
-def entrySlice_143 : CertifiedSlice :=
+noncomputable def entrySlice_143 : CertifiedSlice :=
  ⟨![1,8,0,3], R7.Core.SpectralSliceCertificates.Entry023.polynomial_143, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry023.polynomial_143 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry023.positive_143 y u hy⟩
-def entrySlice_144 : CertifiedSlice :=
+noncomputable def entrySlice_144 : CertifiedSlice :=
  ⟨![1,8,1,2], R7.Core.SpectralSliceCertificates.Entry024.polynomial_144, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry024.polynomial_144 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry024.positive_144 y u hy⟩
-def entrySlice_145 : CertifiedSlice :=
+noncomputable def entrySlice_145 : CertifiedSlice :=
  ⟨![1,9,0,2], R7.Core.SpectralSliceCertificates.Entry024.polynomial_145, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry024.polynomial_145 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry024.positive_145 y u hy⟩
-def entrySlice_146 : CertifiedSlice :=
+noncomputable def entrySlice_146 : CertifiedSlice :=
  ⟨![2,0,0,10], R7.Core.SpectralSliceCertificates.Entry024.polynomial_146, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry024.polynomial_146 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry024.positive_146 y u hy⟩
-def entrySlice_147 : CertifiedSlice :=
+noncomputable def entrySlice_147 : CertifiedSlice :=
  ⟨![2,0,1,9], R7.Core.SpectralSliceCertificates.Entry024.polynomial_147, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry024.polynomial_147 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry024.positive_147 y u hy⟩
-def entrySlice_148 : CertifiedSlice :=
+noncomputable def entrySlice_148 : CertifiedSlice :=
  ⟨![2,0,2,8], R7.Core.SpectralSliceCertificates.Entry024.polynomial_148, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry024.polynomial_148 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry024.positive_148 y u hy⟩
-def entrySlice_149 : CertifiedSlice :=
+noncomputable def entrySlice_149 : CertifiedSlice :=
  ⟨![2,0,3,7], R7.Core.SpectralSliceCertificates.Entry024.polynomial_149, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry024.polynomial_149 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry024.positive_149 y u hy⟩
-def entrySlice_150 : CertifiedSlice :=
+noncomputable def entrySlice_150 : CertifiedSlice :=
  ⟨![2,0,4,6], R7.Core.SpectralSliceCertificates.Entry025.polynomial_150, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry025.polynomial_150 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry025.positive_150 y u hy⟩
-def entrySlice_151 : CertifiedSlice :=
+noncomputable def entrySlice_151 : CertifiedSlice :=
  ⟨![2,0,5,5], R7.Core.SpectralSliceCertificates.Entry025.polynomial_151, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry025.polynomial_151 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry025.positive_151 y u hy⟩
-def entrySlice_152 : CertifiedSlice :=
+noncomputable def entrySlice_152 : CertifiedSlice :=
  ⟨![2,0,6,4], R7.Core.SpectralSliceCertificates.Entry025.polynomial_152, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry025.polynomial_152 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry025.positive_152 y u hy⟩
-def entrySlice_153 : CertifiedSlice :=
+noncomputable def entrySlice_153 : CertifiedSlice :=
  ⟨![2,0,7,3], R7.Core.SpectralSliceCertificates.Entry025.polynomial_153, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry025.polynomial_153 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry025.positive_153 y u hy⟩
-def entrySlice_154 : CertifiedSlice :=
+noncomputable def entrySlice_154 : CertifiedSlice :=
  ⟨![2,0,8,2], R7.Core.SpectralSliceCertificates.Entry025.polynomial_154, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry025.polynomial_154 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry025.positive_154 y u hy⟩
-def entrySlice_155 : CertifiedSlice :=
+noncomputable def entrySlice_155 : CertifiedSlice :=
  ⟨![2,1,0,9], R7.Core.SpectralSliceCertificates.Entry025.polynomial_155, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry025.polynomial_155 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry025.positive_155 y u hy⟩
-def entrySlice_156 : CertifiedSlice :=
+noncomputable def entrySlice_156 : CertifiedSlice :=
  ⟨![2,1,1,8], R7.Core.SpectralSliceCertificates.Entry026.polynomial_156, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry026.polynomial_156 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry026.positive_156 y u hy⟩
-def entrySlice_157 : CertifiedSlice :=
+noncomputable def entrySlice_157 : CertifiedSlice :=
  ⟨![2,1,2,7], R7.Core.SpectralSliceCertificates.Entry026.polynomial_157, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry026.polynomial_157 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry026.positive_157 y u hy⟩
-def entrySlice_158 : CertifiedSlice :=
+noncomputable def entrySlice_158 : CertifiedSlice :=
  ⟨![2,1,3,6], R7.Core.SpectralSliceCertificates.Entry026.polynomial_158, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry026.polynomial_158 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry026.positive_158 y u hy⟩
-def entrySlice_159 : CertifiedSlice :=
+noncomputable def entrySlice_159 : CertifiedSlice :=
  ⟨![2,1,4,5], R7.Core.SpectralSliceCertificates.Entry026.polynomial_159, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry026.polynomial_159 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry026.positive_159 y u hy⟩
-def entrySlice_160 : CertifiedSlice :=
+noncomputable def entrySlice_160 : CertifiedSlice :=
  ⟨![2,1,5,4], R7.Core.SpectralSliceCertificates.Entry026.polynomial_160, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry026.polynomial_160 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry026.positive_160 y u hy⟩
-def entrySlice_161 : CertifiedSlice :=
+noncomputable def entrySlice_161 : CertifiedSlice :=
  ⟨![2,1,6,3], R7.Core.SpectralSliceCertificates.Entry026.polynomial_161, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry026.polynomial_161 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry026.positive_161 y u hy⟩
-def entrySlice_162 : CertifiedSlice :=
+noncomputable def entrySlice_162 : CertifiedSlice :=
  ⟨![2,1,7,2], R7.Core.SpectralSliceCertificates.Entry027.polynomial_162, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry027.polynomial_162 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry027.positive_162 y u hy⟩
-def entrySlice_163 : CertifiedSlice :=
+noncomputable def entrySlice_163 : CertifiedSlice :=
  ⟨![2,2,0,8], R7.Core.SpectralSliceCertificates.Entry027.polynomial_163, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry027.polynomial_163 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry027.positive_163 y u hy⟩
-def entrySlice_164 : CertifiedSlice :=
+noncomputable def entrySlice_164 : CertifiedSlice :=
  ⟨![2,2,1,7], R7.Core.SpectralSliceCertificates.Entry027.polynomial_164, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry027.polynomial_164 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry027.positive_164 y u hy⟩
-def entrySlice_165 : CertifiedSlice :=
+noncomputable def entrySlice_165 : CertifiedSlice :=
  ⟨![2,2,2,6], R7.Core.SpectralSliceCertificates.Entry027.polynomial_165, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry027.polynomial_165 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry027.positive_165 y u hy⟩
-def entrySlice_166 : CertifiedSlice :=
+noncomputable def entrySlice_166 : CertifiedSlice :=
  ⟨![2,2,3,5], R7.Core.SpectralSliceCertificates.Entry027.polynomial_166, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry027.polynomial_166 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry027.positive_166 y u hy⟩
-def entrySlice_167 : CertifiedSlice :=
+noncomputable def entrySlice_167 : CertifiedSlice :=
  ⟨![2,2,4,4], R7.Core.SpectralSliceCertificates.Entry027.polynomial_167, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry027.polynomial_167 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry027.positive_167 y u hy⟩
-def entrySlice_168 : CertifiedSlice :=
+noncomputable def entrySlice_168 : CertifiedSlice :=
  ⟨![2,2,5,3], R7.Core.SpectralSliceCertificates.Entry028.polynomial_168, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry028.polynomial_168 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry028.positive_168 y u hy⟩
-def entrySlice_169 : CertifiedSlice :=
+noncomputable def entrySlice_169 : CertifiedSlice :=
  ⟨![2,2,6,2], R7.Core.SpectralSliceCertificates.Entry028.polynomial_169, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry028.polynomial_169 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry028.positive_169 y u hy⟩
-def entrySlice_170 : CertifiedSlice :=
+noncomputable def entrySlice_170 : CertifiedSlice :=
  ⟨![2,3,0,7], R7.Core.SpectralSliceCertificates.Entry028.polynomial_170, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry028.polynomial_170 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry028.positive_170 y u hy⟩
-def entrySlice_171 : CertifiedSlice :=
+noncomputable def entrySlice_171 : CertifiedSlice :=
  ⟨![2,3,1,6], R7.Core.SpectralSliceCertificates.Entry028.polynomial_171, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry028.polynomial_171 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry028.positive_171 y u hy⟩
-def entrySlice_172 : CertifiedSlice :=
+noncomputable def entrySlice_172 : CertifiedSlice :=
  ⟨![2,3,2,5], R7.Core.SpectralSliceCertificates.Entry028.polynomial_172, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry028.polynomial_172 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry028.positive_172 y u hy⟩
-def entrySlice_173 : CertifiedSlice :=
+noncomputable def entrySlice_173 : CertifiedSlice :=
  ⟨![2,3,3,4], R7.Core.SpectralSliceCertificates.Entry028.polynomial_173, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry028.polynomial_173 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry028.positive_173 y u hy⟩
-def entrySlice_174 : CertifiedSlice :=
+noncomputable def entrySlice_174 : CertifiedSlice :=
  ⟨![2,3,4,3], R7.Core.SpectralSliceCertificates.Entry029.polynomial_174, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry029.polynomial_174 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry029.positive_174 y u hy⟩
-def entrySlice_175 : CertifiedSlice :=
+noncomputable def entrySlice_175 : CertifiedSlice :=
  ⟨![2,3,5,2], R7.Core.SpectralSliceCertificates.Entry029.polynomial_175, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry029.polynomial_175 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry029.positive_175 y u hy⟩
-def entrySlice_176 : CertifiedSlice :=
+noncomputable def entrySlice_176 : CertifiedSlice :=
  ⟨![2,4,0,6], R7.Core.SpectralSliceCertificates.Entry029.polynomial_176, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry029.polynomial_176 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry029.positive_176 y u hy⟩
-def entrySlice_177 : CertifiedSlice :=
+noncomputable def entrySlice_177 : CertifiedSlice :=
  ⟨![2,4,1,5], R7.Core.SpectralSliceCertificates.Entry029.polynomial_177, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry029.polynomial_177 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry029.positive_177 y u hy⟩
-def entrySlice_178 : CertifiedSlice :=
+noncomputable def entrySlice_178 : CertifiedSlice :=
  ⟨![2,4,2,4], R7.Core.SpectralSliceCertificates.Entry029.polynomial_178, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry029.polynomial_178 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry029.positive_178 y u hy⟩
-def entrySlice_179 : CertifiedSlice :=
+noncomputable def entrySlice_179 : CertifiedSlice :=
  ⟨![2,4,3,3], R7.Core.SpectralSliceCertificates.Entry029.polynomial_179, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry029.polynomial_179 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry029.positive_179 y u hy⟩
-def entrySlice_180 : CertifiedSlice :=
+noncomputable def entrySlice_180 : CertifiedSlice :=
  ⟨![2,4,4,2], R7.Core.SpectralSliceCertificates.Entry030.polynomial_180, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry030.polynomial_180 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry030.positive_180 y u hy⟩
-def entrySlice_181 : CertifiedSlice :=
+noncomputable def entrySlice_181 : CertifiedSlice :=
  ⟨![2,5,0,5], R7.Core.SpectralSliceCertificates.Entry030.polynomial_181, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry030.polynomial_181 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry030.positive_181 y u hy⟩
-def entrySlice_182 : CertifiedSlice :=
+noncomputable def entrySlice_182 : CertifiedSlice :=
  ⟨![2,5,1,4], R7.Core.SpectralSliceCertificates.Entry030.polynomial_182, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry030.polynomial_182 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry030.positive_182 y u hy⟩
-def entrySlice_183 : CertifiedSlice :=
+noncomputable def entrySlice_183 : CertifiedSlice :=
  ⟨![2,5,2,3], R7.Core.SpectralSliceCertificates.Entry030.polynomial_183, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry030.polynomial_183 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry030.positive_183 y u hy⟩
-def entrySlice_184 : CertifiedSlice :=
+noncomputable def entrySlice_184 : CertifiedSlice :=
  ⟨![2,6,0,4], R7.Core.SpectralSliceCertificates.Entry030.polynomial_184, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry030.polynomial_184 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry030.positive_184 y u hy⟩
-def entrySlice_185 : CertifiedSlice :=
+noncomputable def entrySlice_185 : CertifiedSlice :=
  ⟨![2,6,1,3], R7.Core.SpectralSliceCertificates.Entry030.polynomial_185, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry030.polynomial_185 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry030.positive_185 y u hy⟩
-def entrySlice_186 : CertifiedSlice :=
+noncomputable def entrySlice_186 : CertifiedSlice :=
  ⟨![2,7,0,3], R7.Core.SpectralSliceCertificates.Entry031.polynomial_186, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry031.polynomial_186 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry031.positive_186 y u hy⟩
-def entrySlice_187 : CertifiedSlice :=
+noncomputable def entrySlice_187 : CertifiedSlice :=
  ⟨![3,0,0,9], R7.Core.SpectralSliceCertificates.Entry031.polynomial_187, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry031.polynomial_187 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry031.positive_187 y u hy⟩
-def entrySlice_188 : CertifiedSlice :=
+noncomputable def entrySlice_188 : CertifiedSlice :=
  ⟨![3,0,1,8], R7.Core.SpectralSliceCertificates.Entry031.polynomial_188, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry031.polynomial_188 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry031.positive_188 y u hy⟩
-def entrySlice_189 : CertifiedSlice :=
+noncomputable def entrySlice_189 : CertifiedSlice :=
  ⟨![3,0,2,7], R7.Core.SpectralSliceCertificates.Entry031.polynomial_189, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry031.polynomial_189 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry031.positive_189 y u hy⟩
-def entrySlice_190 : CertifiedSlice :=
+noncomputable def entrySlice_190 : CertifiedSlice :=
  ⟨![3,0,3,6], R7.Core.SpectralSliceCertificates.Entry031.polynomial_190, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry031.polynomial_190 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry031.positive_190 y u hy⟩
-def entrySlice_191 : CertifiedSlice :=
+noncomputable def entrySlice_191 : CertifiedSlice :=
  ⟨![3,0,4,5], R7.Core.SpectralSliceCertificates.Entry031.polynomial_191, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry031.polynomial_191 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry031.positive_191 y u hy⟩
-def entrySlice_192 : CertifiedSlice :=
+noncomputable def entrySlice_192 : CertifiedSlice :=
  ⟨![3,0,5,4], R7.Core.SpectralSliceCertificates.Entry032.polynomial_192, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry032.polynomial_192 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry032.positive_192 y u hy⟩
-def entrySlice_193 : CertifiedSlice :=
+noncomputable def entrySlice_193 : CertifiedSlice :=
  ⟨![3,0,6,3], R7.Core.SpectralSliceCertificates.Entry032.polynomial_193, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry032.polynomial_193 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry032.positive_193 y u hy⟩
-def entrySlice_194 : CertifiedSlice :=
+noncomputable def entrySlice_194 : CertifiedSlice :=
  ⟨![3,1,0,8], R7.Core.SpectralSliceCertificates.Entry032.polynomial_194, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry032.polynomial_194 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry032.positive_194 y u hy⟩
-def entrySlice_195 : CertifiedSlice :=
+noncomputable def entrySlice_195 : CertifiedSlice :=
  ⟨![3,1,1,7], R7.Core.SpectralSliceCertificates.Entry032.polynomial_195, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry032.polynomial_195 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry032.positive_195 y u hy⟩
-def entrySlice_196 : CertifiedSlice :=
+noncomputable def entrySlice_196 : CertifiedSlice :=
  ⟨![3,1,2,6], R7.Core.SpectralSliceCertificates.Entry032.polynomial_196, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry032.polynomial_196 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry032.positive_196 y u hy⟩
-def entrySlice_197 : CertifiedSlice :=
+noncomputable def entrySlice_197 : CertifiedSlice :=
  ⟨![3,1,3,5], R7.Core.SpectralSliceCertificates.Entry032.polynomial_197, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry032.polynomial_197 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry032.positive_197 y u hy⟩
-def entrySlice_198 : CertifiedSlice :=
+noncomputable def entrySlice_198 : CertifiedSlice :=
  ⟨![3,1,4,4], R7.Core.SpectralSliceCertificates.Entry033.polynomial_198, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry033.polynomial_198 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry033.positive_198 y u hy⟩
-def entrySlice_199 : CertifiedSlice :=
+noncomputable def entrySlice_199 : CertifiedSlice :=
  ⟨![3,1,5,3], R7.Core.SpectralSliceCertificates.Entry033.polynomial_199, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry033.polynomial_199 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry033.positive_199 y u hy⟩
-def entrySlice_200 : CertifiedSlice :=
+noncomputable def entrySlice_200 : CertifiedSlice :=
  ⟨![3,2,0,7], R7.Core.SpectralSliceCertificates.Entry033.polynomial_200, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry033.polynomial_200 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry033.positive_200 y u hy⟩
-def entrySlice_201 : CertifiedSlice :=
+noncomputable def entrySlice_201 : CertifiedSlice :=
  ⟨![3,2,1,6], R7.Core.SpectralSliceCertificates.Entry033.polynomial_201, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry033.polynomial_201 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry033.positive_201 y u hy⟩
-def entrySlice_202 : CertifiedSlice :=
+noncomputable def entrySlice_202 : CertifiedSlice :=
  ⟨![3,2,2,5], R7.Core.SpectralSliceCertificates.Entry033.polynomial_202, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry033.polynomial_202 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry033.positive_202 y u hy⟩
-def entrySlice_203 : CertifiedSlice :=
+noncomputable def entrySlice_203 : CertifiedSlice :=
  ⟨![3,2,3,4], R7.Core.SpectralSliceCertificates.Entry033.polynomial_203, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry033.polynomial_203 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry033.positive_203 y u hy⟩
-def entrySlice_204 : CertifiedSlice :=
+noncomputable def entrySlice_204 : CertifiedSlice :=
  ⟨![3,2,4,3], R7.Core.SpectralSliceCertificates.Entry034.polynomial_204, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry034.polynomial_204 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry034.positive_204 y u hy⟩
-def entrySlice_205 : CertifiedSlice :=
+noncomputable def entrySlice_205 : CertifiedSlice :=
  ⟨![3,3,0,6], R7.Core.SpectralSliceCertificates.Entry034.polynomial_205, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry034.polynomial_205 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry034.positive_205 y u hy⟩
-def entrySlice_206 : CertifiedSlice :=
+noncomputable def entrySlice_206 : CertifiedSlice :=
  ⟨![3,3,1,5], R7.Core.SpectralSliceCertificates.Entry034.polynomial_206, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry034.polynomial_206 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry034.positive_206 y u hy⟩
-def entrySlice_207 : CertifiedSlice :=
+noncomputable def entrySlice_207 : CertifiedSlice :=
  ⟨![3,3,2,4], R7.Core.SpectralSliceCertificates.Entry034.polynomial_207, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry034.polynomial_207 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry034.positive_207 y u hy⟩
-def entrySlice_208 : CertifiedSlice :=
+noncomputable def entrySlice_208 : CertifiedSlice :=
  ⟨![3,3,3,3], R7.Core.SpectralSliceCertificates.Entry034.polynomial_208, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry034.polynomial_208 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry034.positive_208 y u hy⟩
-def entrySlice_209 : CertifiedSlice :=
+noncomputable def entrySlice_209 : CertifiedSlice :=
  ⟨![3,4,0,5], R7.Core.SpectralSliceCertificates.Entry034.polynomial_209, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry034.polynomial_209 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry034.positive_209 y u hy⟩
-def entrySlice_210 : CertifiedSlice :=
+noncomputable def entrySlice_210 : CertifiedSlice :=
  ⟨![3,4,1,4], R7.Core.SpectralSliceCertificates.Entry035.polynomial_210, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry035.polynomial_210 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry035.positive_210 y u hy⟩
-def entrySlice_211 : CertifiedSlice :=
+noncomputable def entrySlice_211 : CertifiedSlice :=
  ⟨![3,5,0,4], R7.Core.SpectralSliceCertificates.Entry035.polynomial_211, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry035.polynomial_211 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry035.positive_211 y u hy⟩
-def entrySlice_212 : CertifiedSlice :=
+noncomputable def entrySlice_212 : CertifiedSlice :=
  ⟨![4,0,0,8], R7.Core.SpectralSliceCertificates.Entry035.polynomial_212, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry035.polynomial_212 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry035.positive_212 y u hy⟩
-def entrySlice_213 : CertifiedSlice :=
+noncomputable def entrySlice_213 : CertifiedSlice :=
  ⟨![4,0,1,7], R7.Core.SpectralSliceCertificates.Entry035.polynomial_213, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry035.polynomial_213 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry035.positive_213 y u hy⟩
-def entrySlice_214 : CertifiedSlice :=
+noncomputable def entrySlice_214 : CertifiedSlice :=
  ⟨![4,0,2,6], R7.Core.SpectralSliceCertificates.Entry035.polynomial_214, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry035.polynomial_214 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry035.positive_214 y u hy⟩
-def entrySlice_215 : CertifiedSlice :=
+noncomputable def entrySlice_215 : CertifiedSlice :=
  ⟨![4,0,3,5], R7.Core.SpectralSliceCertificates.Entry035.polynomial_215, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry035.polynomial_215 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry035.positive_215 y u hy⟩
-def entrySlice_216 : CertifiedSlice :=
+noncomputable def entrySlice_216 : CertifiedSlice :=
  ⟨![4,0,4,4], R7.Core.SpectralSliceCertificates.Entry036.polynomial_216, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry036.polynomial_216 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry036.positive_216 y u hy⟩
-def entrySlice_217 : CertifiedSlice :=
+noncomputable def entrySlice_217 : CertifiedSlice :=
  ⟨![4,1,0,7], R7.Core.SpectralSliceCertificates.Entry036.polynomial_217, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry036.polynomial_217 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry036.positive_217 y u hy⟩
-def entrySlice_218 : CertifiedSlice :=
+noncomputable def entrySlice_218 : CertifiedSlice :=
  ⟨![4,1,1,6], R7.Core.SpectralSliceCertificates.Entry036.polynomial_218, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry036.polynomial_218 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry036.positive_218 y u hy⟩
-def entrySlice_219 : CertifiedSlice :=
+noncomputable def entrySlice_219 : CertifiedSlice :=
  ⟨![4,1,2,5], R7.Core.SpectralSliceCertificates.Entry036.polynomial_219, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry036.polynomial_219 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry036.positive_219 y u hy⟩
-def entrySlice_220 : CertifiedSlice :=
+noncomputable def entrySlice_220 : CertifiedSlice :=
  ⟨![4,1,3,4], R7.Core.SpectralSliceCertificates.Entry036.polynomial_220, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry036.polynomial_220 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry036.positive_220 y u hy⟩
-def entrySlice_221 : CertifiedSlice :=
+noncomputable def entrySlice_221 : CertifiedSlice :=
  ⟨![4,2,0,6], R7.Core.SpectralSliceCertificates.Entry036.polynomial_221, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry036.polynomial_221 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry036.positive_221 y u hy⟩
-def entrySlice_222 : CertifiedSlice :=
+noncomputable def entrySlice_222 : CertifiedSlice :=
  ⟨![4,2,1,5], R7.Core.SpectralSliceCertificates.Entry037.polynomial_222, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry037.polynomial_222 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry037.positive_222 y u hy⟩
-def entrySlice_223 : CertifiedSlice :=
+noncomputable def entrySlice_223 : CertifiedSlice :=
  ⟨![4,2,2,4], R7.Core.SpectralSliceCertificates.Entry037.polynomial_223, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry037.polynomial_223 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry037.positive_223 y u hy⟩
-def entrySlice_224 : CertifiedSlice :=
+noncomputable def entrySlice_224 : CertifiedSlice :=
  ⟨![4,3,0,5], R7.Core.SpectralSliceCertificates.Entry037.polynomial_224, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry037.polynomial_224 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry037.positive_224 y u hy⟩
-def entrySlice_225 : CertifiedSlice :=
+noncomputable def entrySlice_225 : CertifiedSlice :=
  ⟨![5,0,0,7], R7.Core.SpectralSliceCertificates.Entry037.polynomial_225, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry037.polynomial_225 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry037.positive_225 y u hy⟩
-def entrySlice_226 : CertifiedSlice :=
+noncomputable def entrySlice_226 : CertifiedSlice :=
  ⟨![5,0,1,6], R7.Core.SpectralSliceCertificates.Entry037.polynomial_226, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry037.polynomial_226 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry037.positive_226 y u hy⟩
-def entrySlice_227 : CertifiedSlice :=
+noncomputable def entrySlice_227 : CertifiedSlice :=
  ⟨![5,0,2,5], R7.Core.SpectralSliceCertificates.Entry037.polynomial_227, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry037.polynomial_227 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry037.positive_227 y u hy⟩
-def entrySlice_228 : CertifiedSlice :=
+noncomputable def entrySlice_228 : CertifiedSlice :=
  ⟨![5,1,0,6], R7.Core.SpectralSliceCertificates.Entry038.polynomial_228, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry038.polynomial_228 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry038.positive_228 y u hy⟩
-def entrySlice_229 : CertifiedSlice :=
+noncomputable def entrySlice_229 : CertifiedSlice :=
  ⟨![5,1,1,5], R7.Core.SpectralSliceCertificates.Entry038.polynomial_229, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry038.polynomial_229 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry038.positive_229 y u hy⟩
-def entrySlice_230 : CertifiedSlice :=
+noncomputable def entrySlice_230 : CertifiedSlice :=
  ⟨![6,0,0,6], R7.Core.SpectralSliceCertificates.Entry038.polynomial_230, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.Entry038.polynomial_230 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.Entry038.positive_230 y u hy⟩
-def entryCertified : List CertifiedSlice := [
+noncomputable def entryCertified : List CertifiedSlice := [
  entrySlice_0,
  entrySlice_1,
  entrySlice_2,
@@ -2079,1629 +2080,1629 @@ def entryCertified : List CertifiedSlice := [
  CertifiedSlice.reflected ![11,1,0,0] (entrySlice_1),
  CertifiedSlice.reflected ![12,0,0,0] (entrySlice_0)
 ]
-def entryGroups : Groups := entryCertified.map CertifiedSlice.row
+noncomputable def entryGroups : Groups := entryCertified.map CertifiedSlice.row
 theorem entryGroups_positive (row) (hrow : row ∈ entryGroups) (u y : ℝ) (hy : 0 ≤ y) :
  0 < eval row.2 u y := certifiedRows_positive entryCertified row hrow u y hy
 theorem entryGroups_short : ∀ row ∈ entryGroups, ∀ a ∈ row.2, a.length ≤ 3 := by
  decide +kernel
-def criticalLSlice_0 : CertifiedSlice :=
+noncomputable def criticalLSlice_0 : CertifiedSlice :=
  ⟨![0,0,0,12], R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_0, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_0 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL000.positive_0 y u hy⟩
-def criticalLSlice_1 : CertifiedSlice :=
+noncomputable def criticalLSlice_1 : CertifiedSlice :=
  ⟨![0,0,1,11], R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_1, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_1 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL000.positive_1 y u hy⟩
-def criticalLSlice_2 : CertifiedSlice :=
+noncomputable def criticalLSlice_2 : CertifiedSlice :=
  ⟨![0,0,2,10], R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_2, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_2 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL000.positive_2 y u hy⟩
-def criticalLSlice_3 : CertifiedSlice :=
+noncomputable def criticalLSlice_3 : CertifiedSlice :=
  ⟨![0,0,3,9], R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_3, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_3 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL000.positive_3 y u hy⟩
-def criticalLSlice_4 : CertifiedSlice :=
+noncomputable def criticalLSlice_4 : CertifiedSlice :=
  ⟨![0,0,4,8], R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_4, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_4 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL000.positive_4 y u hy⟩
-def criticalLSlice_5 : CertifiedSlice :=
+noncomputable def criticalLSlice_5 : CertifiedSlice :=
  ⟨![0,0,5,7], R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_5, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL000.polynomial_5 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL000.positive_5 y u hy⟩
-def criticalLSlice_6 : CertifiedSlice :=
+noncomputable def criticalLSlice_6 : CertifiedSlice :=
  ⟨![0,0,6,6], R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_6, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_6 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL001.positive_6 y u hy⟩
-def criticalLSlice_7 : CertifiedSlice :=
+noncomputable def criticalLSlice_7 : CertifiedSlice :=
  ⟨![0,0,7,5], R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_7, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_7 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL001.positive_7 y u hy⟩
-def criticalLSlice_8 : CertifiedSlice :=
+noncomputable def criticalLSlice_8 : CertifiedSlice :=
  ⟨![0,0,8,4], R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_8, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_8 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL001.positive_8 y u hy⟩
-def criticalLSlice_9 : CertifiedSlice :=
+noncomputable def criticalLSlice_9 : CertifiedSlice :=
  ⟨![0,0,9,3], R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_9, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_9 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL001.positive_9 y u hy⟩
-def criticalLSlice_10 : CertifiedSlice :=
+noncomputable def criticalLSlice_10 : CertifiedSlice :=
  ⟨![0,0,10,2], R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_10, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_10 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL001.positive_10 y u hy⟩
-def criticalLSlice_11 : CertifiedSlice :=
+noncomputable def criticalLSlice_11 : CertifiedSlice :=
  ⟨![0,0,11,1], R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_11, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL001.polynomial_11 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL001.positive_11 y u hy⟩
-def criticalLSlice_12 : CertifiedSlice :=
+noncomputable def criticalLSlice_12 : CertifiedSlice :=
  ⟨![0,0,12,0], R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_12, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_12 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL002.positive_12 y u hy⟩
-def criticalLSlice_13 : CertifiedSlice :=
+noncomputable def criticalLSlice_13 : CertifiedSlice :=
  ⟨![0,1,0,11], R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_13, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_13 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL002.positive_13 y u hy⟩
-def criticalLSlice_14 : CertifiedSlice :=
+noncomputable def criticalLSlice_14 : CertifiedSlice :=
  ⟨![0,1,1,10], R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_14, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_14 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL002.positive_14 y u hy⟩
-def criticalLSlice_15 : CertifiedSlice :=
+noncomputable def criticalLSlice_15 : CertifiedSlice :=
  ⟨![0,1,2,9], R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_15, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_15 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL002.positive_15 y u hy⟩
-def criticalLSlice_16 : CertifiedSlice :=
+noncomputable def criticalLSlice_16 : CertifiedSlice :=
  ⟨![0,1,3,8], R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_16, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_16 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL002.positive_16 y u hy⟩
-def criticalLSlice_17 : CertifiedSlice :=
+noncomputable def criticalLSlice_17 : CertifiedSlice :=
  ⟨![0,1,4,7], R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_17, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL002.polynomial_17 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL002.positive_17 y u hy⟩
-def criticalLSlice_18 : CertifiedSlice :=
+noncomputable def criticalLSlice_18 : CertifiedSlice :=
  ⟨![0,1,5,6], R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_18, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_18 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL003.positive_18 y u hy⟩
-def criticalLSlice_19 : CertifiedSlice :=
+noncomputable def criticalLSlice_19 : CertifiedSlice :=
  ⟨![0,1,6,5], R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_19, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_19 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL003.positive_19 y u hy⟩
-def criticalLSlice_20 : CertifiedSlice :=
+noncomputable def criticalLSlice_20 : CertifiedSlice :=
  ⟨![0,1,7,4], R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_20, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_20 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL003.positive_20 y u hy⟩
-def criticalLSlice_21 : CertifiedSlice :=
+noncomputable def criticalLSlice_21 : CertifiedSlice :=
  ⟨![0,1,8,3], R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_21, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_21 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL003.positive_21 y u hy⟩
-def criticalLSlice_22 : CertifiedSlice :=
+noncomputable def criticalLSlice_22 : CertifiedSlice :=
  ⟨![0,1,9,2], R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_22, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_22 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL003.positive_22 y u hy⟩
-def criticalLSlice_23 : CertifiedSlice :=
+noncomputable def criticalLSlice_23 : CertifiedSlice :=
  ⟨![0,1,10,1], R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_23, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL003.polynomial_23 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL003.positive_23 y u hy⟩
-def criticalLSlice_24 : CertifiedSlice :=
+noncomputable def criticalLSlice_24 : CertifiedSlice :=
  ⟨![0,1,11,0], R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_24, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_24 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL004.positive_24 y u hy⟩
-def criticalLSlice_25 : CertifiedSlice :=
+noncomputable def criticalLSlice_25 : CertifiedSlice :=
  ⟨![0,2,0,10], R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_25, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_25 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL004.positive_25 y u hy⟩
-def criticalLSlice_26 : CertifiedSlice :=
+noncomputable def criticalLSlice_26 : CertifiedSlice :=
  ⟨![0,2,1,9], R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_26, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_26 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL004.positive_26 y u hy⟩
-def criticalLSlice_27 : CertifiedSlice :=
+noncomputable def criticalLSlice_27 : CertifiedSlice :=
  ⟨![0,2,2,8], R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_27, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_27 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL004.positive_27 y u hy⟩
-def criticalLSlice_28 : CertifiedSlice :=
+noncomputable def criticalLSlice_28 : CertifiedSlice :=
  ⟨![0,2,3,7], R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_28, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_28 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL004.positive_28 y u hy⟩
-def criticalLSlice_29 : CertifiedSlice :=
+noncomputable def criticalLSlice_29 : CertifiedSlice :=
  ⟨![0,2,4,6], R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_29, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL004.polynomial_29 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL004.positive_29 y u hy⟩
-def criticalLSlice_30 : CertifiedSlice :=
+noncomputable def criticalLSlice_30 : CertifiedSlice :=
  ⟨![0,2,5,5], R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_30, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_30 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL005.positive_30 y u hy⟩
-def criticalLSlice_31 : CertifiedSlice :=
+noncomputable def criticalLSlice_31 : CertifiedSlice :=
  ⟨![0,2,6,4], R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_31, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_31 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL005.positive_31 y u hy⟩
-def criticalLSlice_32 : CertifiedSlice :=
+noncomputable def criticalLSlice_32 : CertifiedSlice :=
  ⟨![0,2,7,3], R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_32, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_32 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL005.positive_32 y u hy⟩
-def criticalLSlice_33 : CertifiedSlice :=
+noncomputable def criticalLSlice_33 : CertifiedSlice :=
  ⟨![0,2,8,2], R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_33, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_33 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL005.positive_33 y u hy⟩
-def criticalLSlice_34 : CertifiedSlice :=
+noncomputable def criticalLSlice_34 : CertifiedSlice :=
  ⟨![0,2,9,1], R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_34, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_34 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL005.positive_34 y u hy⟩
-def criticalLSlice_35 : CertifiedSlice :=
+noncomputable def criticalLSlice_35 : CertifiedSlice :=
  ⟨![0,2,10,0], R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_35, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL005.polynomial_35 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL005.positive_35 y u hy⟩
-def criticalLSlice_36 : CertifiedSlice :=
+noncomputable def criticalLSlice_36 : CertifiedSlice :=
  ⟨![0,3,0,9], R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_36, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_36 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL006.positive_36 y u hy⟩
-def criticalLSlice_37 : CertifiedSlice :=
+noncomputable def criticalLSlice_37 : CertifiedSlice :=
  ⟨![0,3,1,8], R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_37, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_37 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL006.positive_37 y u hy⟩
-def criticalLSlice_38 : CertifiedSlice :=
+noncomputable def criticalLSlice_38 : CertifiedSlice :=
  ⟨![0,3,2,7], R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_38, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_38 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL006.positive_38 y u hy⟩
-def criticalLSlice_39 : CertifiedSlice :=
+noncomputable def criticalLSlice_39 : CertifiedSlice :=
  ⟨![0,3,3,6], R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_39, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_39 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL006.positive_39 y u hy⟩
-def criticalLSlice_40 : CertifiedSlice :=
+noncomputable def criticalLSlice_40 : CertifiedSlice :=
  ⟨![0,3,4,5], R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_40, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_40 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL006.positive_40 y u hy⟩
-def criticalLSlice_41 : CertifiedSlice :=
+noncomputable def criticalLSlice_41 : CertifiedSlice :=
  ⟨![0,3,5,4], R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_41, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL006.polynomial_41 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL006.positive_41 y u hy⟩
-def criticalLSlice_42 : CertifiedSlice :=
+noncomputable def criticalLSlice_42 : CertifiedSlice :=
  ⟨![0,3,6,3], R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_42, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_42 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL007.positive_42 y u hy⟩
-def criticalLSlice_43 : CertifiedSlice :=
+noncomputable def criticalLSlice_43 : CertifiedSlice :=
  ⟨![0,3,7,2], R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_43, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_43 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL007.positive_43 y u hy⟩
-def criticalLSlice_44 : CertifiedSlice :=
+noncomputable def criticalLSlice_44 : CertifiedSlice :=
  ⟨![0,3,8,1], R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_44, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_44 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL007.positive_44 y u hy⟩
-def criticalLSlice_45 : CertifiedSlice :=
+noncomputable def criticalLSlice_45 : CertifiedSlice :=
  ⟨![0,3,9,0], R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_45, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_45 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL007.positive_45 y u hy⟩
-def criticalLSlice_46 : CertifiedSlice :=
+noncomputable def criticalLSlice_46 : CertifiedSlice :=
  ⟨![0,4,0,8], R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_46, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_46 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL007.positive_46 y u hy⟩
-def criticalLSlice_47 : CertifiedSlice :=
+noncomputable def criticalLSlice_47 : CertifiedSlice :=
  ⟨![0,4,1,7], R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_47, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL007.polynomial_47 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL007.positive_47 y u hy⟩
-def criticalLSlice_48 : CertifiedSlice :=
+noncomputable def criticalLSlice_48 : CertifiedSlice :=
  ⟨![0,4,2,6], R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_48, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_48 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL008.positive_48 y u hy⟩
-def criticalLSlice_49 : CertifiedSlice :=
+noncomputable def criticalLSlice_49 : CertifiedSlice :=
  ⟨![0,4,3,5], R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_49, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_49 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL008.positive_49 y u hy⟩
-def criticalLSlice_50 : CertifiedSlice :=
+noncomputable def criticalLSlice_50 : CertifiedSlice :=
  ⟨![0,4,4,4], R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_50, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_50 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL008.positive_50 y u hy⟩
-def criticalLSlice_51 : CertifiedSlice :=
+noncomputable def criticalLSlice_51 : CertifiedSlice :=
  ⟨![0,4,5,3], R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_51, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_51 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL008.positive_51 y u hy⟩
-def criticalLSlice_52 : CertifiedSlice :=
+noncomputable def criticalLSlice_52 : CertifiedSlice :=
  ⟨![0,4,6,2], R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_52, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_52 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL008.positive_52 y u hy⟩
-def criticalLSlice_53 : CertifiedSlice :=
+noncomputable def criticalLSlice_53 : CertifiedSlice :=
  ⟨![0,4,7,1], R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_53, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL008.polynomial_53 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL008.positive_53 y u hy⟩
-def criticalLSlice_54 : CertifiedSlice :=
+noncomputable def criticalLSlice_54 : CertifiedSlice :=
  ⟨![0,4,8,0], R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_54, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_54 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL009.positive_54 y u hy⟩
-def criticalLSlice_55 : CertifiedSlice :=
+noncomputable def criticalLSlice_55 : CertifiedSlice :=
  ⟨![0,5,0,7], R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_55, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_55 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL009.positive_55 y u hy⟩
-def criticalLSlice_56 : CertifiedSlice :=
+noncomputable def criticalLSlice_56 : CertifiedSlice :=
  ⟨![0,5,1,6], R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_56, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_56 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL009.positive_56 y u hy⟩
-def criticalLSlice_57 : CertifiedSlice :=
+noncomputable def criticalLSlice_57 : CertifiedSlice :=
  ⟨![0,5,2,5], R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_57, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_57 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL009.positive_57 y u hy⟩
-def criticalLSlice_58 : CertifiedSlice :=
+noncomputable def criticalLSlice_58 : CertifiedSlice :=
  ⟨![0,5,3,4], R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_58, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_58 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL009.positive_58 y u hy⟩
-def criticalLSlice_59 : CertifiedSlice :=
+noncomputable def criticalLSlice_59 : CertifiedSlice :=
  ⟨![0,5,4,3], R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_59, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL009.polynomial_59 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL009.positive_59 y u hy⟩
-def criticalLSlice_60 : CertifiedSlice :=
+noncomputable def criticalLSlice_60 : CertifiedSlice :=
  ⟨![0,5,5,2], R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_60, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_60 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL010.positive_60 y u hy⟩
-def criticalLSlice_61 : CertifiedSlice :=
+noncomputable def criticalLSlice_61 : CertifiedSlice :=
  ⟨![0,5,6,1], R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_61, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_61 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL010.positive_61 y u hy⟩
-def criticalLSlice_62 : CertifiedSlice :=
+noncomputable def criticalLSlice_62 : CertifiedSlice :=
  ⟨![0,5,7,0], R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_62, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_62 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL010.positive_62 y u hy⟩
-def criticalLSlice_63 : CertifiedSlice :=
+noncomputable def criticalLSlice_63 : CertifiedSlice :=
  ⟨![0,6,0,6], R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_63, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_63 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL010.positive_63 y u hy⟩
-def criticalLSlice_64 : CertifiedSlice :=
+noncomputable def criticalLSlice_64 : CertifiedSlice :=
  ⟨![0,6,1,5], R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_64, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_64 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL010.positive_64 y u hy⟩
-def criticalLSlice_65 : CertifiedSlice :=
+noncomputable def criticalLSlice_65 : CertifiedSlice :=
  ⟨![0,6,2,4], R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_65, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL010.polynomial_65 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL010.positive_65 y u hy⟩
-def criticalLSlice_66 : CertifiedSlice :=
+noncomputable def criticalLSlice_66 : CertifiedSlice :=
  ⟨![0,6,3,3], R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_66, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_66 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL011.positive_66 y u hy⟩
-def criticalLSlice_67 : CertifiedSlice :=
+noncomputable def criticalLSlice_67 : CertifiedSlice :=
  ⟨![0,6,4,2], R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_67, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_67 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL011.positive_67 y u hy⟩
-def criticalLSlice_68 : CertifiedSlice :=
+noncomputable def criticalLSlice_68 : CertifiedSlice :=
  ⟨![0,6,5,1], R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_68, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_68 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL011.positive_68 y u hy⟩
-def criticalLSlice_69 : CertifiedSlice :=
+noncomputable def criticalLSlice_69 : CertifiedSlice :=
  ⟨![0,6,6,0], R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_69, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_69 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL011.positive_69 y u hy⟩
-def criticalLSlice_70 : CertifiedSlice :=
+noncomputable def criticalLSlice_70 : CertifiedSlice :=
  ⟨![0,7,0,5], R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_70, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_70 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL011.positive_70 y u hy⟩
-def criticalLSlice_71 : CertifiedSlice :=
+noncomputable def criticalLSlice_71 : CertifiedSlice :=
  ⟨![0,7,1,4], R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_71, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL011.polynomial_71 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL011.positive_71 y u hy⟩
-def criticalLSlice_72 : CertifiedSlice :=
+noncomputable def criticalLSlice_72 : CertifiedSlice :=
  ⟨![0,7,2,3], R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_72, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_72 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL012.positive_72 y u hy⟩
-def criticalLSlice_73 : CertifiedSlice :=
+noncomputable def criticalLSlice_73 : CertifiedSlice :=
  ⟨![0,7,3,2], R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_73, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_73 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL012.positive_73 y u hy⟩
-def criticalLSlice_74 : CertifiedSlice :=
+noncomputable def criticalLSlice_74 : CertifiedSlice :=
  ⟨![0,7,4,1], R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_74, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_74 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL012.positive_74 y u hy⟩
-def criticalLSlice_75 : CertifiedSlice :=
+noncomputable def criticalLSlice_75 : CertifiedSlice :=
  ⟨![0,8,0,4], R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_75, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_75 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL012.positive_75 y u hy⟩
-def criticalLSlice_76 : CertifiedSlice :=
+noncomputable def criticalLSlice_76 : CertifiedSlice :=
  ⟨![0,8,1,3], R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_76, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_76 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL012.positive_76 y u hy⟩
-def criticalLSlice_77 : CertifiedSlice :=
+noncomputable def criticalLSlice_77 : CertifiedSlice :=
  ⟨![0,8,2,2], R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_77, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL012.polynomial_77 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL012.positive_77 y u hy⟩
-def criticalLSlice_78 : CertifiedSlice :=
+noncomputable def criticalLSlice_78 : CertifiedSlice :=
  ⟨![0,8,3,1], R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_78, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_78 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL013.positive_78 y u hy⟩
-def criticalLSlice_79 : CertifiedSlice :=
+noncomputable def criticalLSlice_79 : CertifiedSlice :=
  ⟨![0,9,0,3], R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_79, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_79 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL013.positive_79 y u hy⟩
-def criticalLSlice_80 : CertifiedSlice :=
+noncomputable def criticalLSlice_80 : CertifiedSlice :=
  ⟨![0,9,1,2], R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_80, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_80 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL013.positive_80 y u hy⟩
-def criticalLSlice_81 : CertifiedSlice :=
+noncomputable def criticalLSlice_81 : CertifiedSlice :=
  ⟨![0,9,2,1], R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_81, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_81 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL013.positive_81 y u hy⟩
-def criticalLSlice_82 : CertifiedSlice :=
+noncomputable def criticalLSlice_82 : CertifiedSlice :=
  ⟨![0,10,0,2], R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_82, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_82 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL013.positive_82 y u hy⟩
-def criticalLSlice_83 : CertifiedSlice :=
+noncomputable def criticalLSlice_83 : CertifiedSlice :=
  ⟨![0,10,1,1], R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_83, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL013.polynomial_83 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL013.positive_83 y u hy⟩
-def criticalLSlice_84 : CertifiedSlice :=
+noncomputable def criticalLSlice_84 : CertifiedSlice :=
  ⟨![0,11,0,1], R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_84, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_84 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL014.positive_84 y u hy⟩
-def criticalLSlice_85 : CertifiedSlice :=
+noncomputable def criticalLSlice_85 : CertifiedSlice :=
  ⟨![1,0,0,11], R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_85, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_85 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL014.positive_85 y u hy⟩
-def criticalLSlice_86 : CertifiedSlice :=
+noncomputable def criticalLSlice_86 : CertifiedSlice :=
  ⟨![1,0,1,10], R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_86, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_86 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL014.positive_86 y u hy⟩
-def criticalLSlice_87 : CertifiedSlice :=
+noncomputable def criticalLSlice_87 : CertifiedSlice :=
  ⟨![1,0,2,9], R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_87, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_87 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL014.positive_87 y u hy⟩
-def criticalLSlice_88 : CertifiedSlice :=
+noncomputable def criticalLSlice_88 : CertifiedSlice :=
  ⟨![1,0,3,8], R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_88, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_88 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL014.positive_88 y u hy⟩
-def criticalLSlice_89 : CertifiedSlice :=
+noncomputable def criticalLSlice_89 : CertifiedSlice :=
  ⟨![1,0,4,7], R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_89, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL014.polynomial_89 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL014.positive_89 y u hy⟩
-def criticalLSlice_90 : CertifiedSlice :=
+noncomputable def criticalLSlice_90 : CertifiedSlice :=
  ⟨![1,0,5,6], R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_90, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_90 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL015.positive_90 y u hy⟩
-def criticalLSlice_91 : CertifiedSlice :=
+noncomputable def criticalLSlice_91 : CertifiedSlice :=
  ⟨![1,0,6,5], R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_91, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_91 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL015.positive_91 y u hy⟩
-def criticalLSlice_92 : CertifiedSlice :=
+noncomputable def criticalLSlice_92 : CertifiedSlice :=
  ⟨![1,0,7,4], R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_92, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_92 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL015.positive_92 y u hy⟩
-def criticalLSlice_93 : CertifiedSlice :=
+noncomputable def criticalLSlice_93 : CertifiedSlice :=
  ⟨![1,0,8,3], R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_93, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_93 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL015.positive_93 y u hy⟩
-def criticalLSlice_94 : CertifiedSlice :=
+noncomputable def criticalLSlice_94 : CertifiedSlice :=
  ⟨![1,0,9,2], R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_94, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_94 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL015.positive_94 y u hy⟩
-def criticalLSlice_95 : CertifiedSlice :=
+noncomputable def criticalLSlice_95 : CertifiedSlice :=
  ⟨![1,0,10,1], R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_95, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL015.polynomial_95 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL015.positive_95 y u hy⟩
-def criticalLSlice_96 : CertifiedSlice :=
+noncomputable def criticalLSlice_96 : CertifiedSlice :=
  ⟨![1,1,0,10], R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_96, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_96 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL016.positive_96 y u hy⟩
-def criticalLSlice_97 : CertifiedSlice :=
+noncomputable def criticalLSlice_97 : CertifiedSlice :=
  ⟨![1,1,1,9], R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_97, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_97 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL016.positive_97 y u hy⟩
-def criticalLSlice_98 : CertifiedSlice :=
+noncomputable def criticalLSlice_98 : CertifiedSlice :=
  ⟨![1,1,2,8], R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_98, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_98 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL016.positive_98 y u hy⟩
-def criticalLSlice_99 : CertifiedSlice :=
+noncomputable def criticalLSlice_99 : CertifiedSlice :=
  ⟨![1,1,3,7], R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_99, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_99 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL016.positive_99 y u hy⟩
-def criticalLSlice_100 : CertifiedSlice :=
+noncomputable def criticalLSlice_100 : CertifiedSlice :=
  ⟨![1,1,4,6], R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_100, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_100 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL016.positive_100 y u hy⟩
-def criticalLSlice_101 : CertifiedSlice :=
+noncomputable def criticalLSlice_101 : CertifiedSlice :=
  ⟨![1,1,5,5], R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_101, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL016.polynomial_101 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL016.positive_101 y u hy⟩
-def criticalLSlice_102 : CertifiedSlice :=
+noncomputable def criticalLSlice_102 : CertifiedSlice :=
  ⟨![1,1,6,4], R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_102, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_102 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL017.positive_102 y u hy⟩
-def criticalLSlice_103 : CertifiedSlice :=
+noncomputable def criticalLSlice_103 : CertifiedSlice :=
  ⟨![1,1,7,3], R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_103, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_103 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL017.positive_103 y u hy⟩
-def criticalLSlice_104 : CertifiedSlice :=
+noncomputable def criticalLSlice_104 : CertifiedSlice :=
  ⟨![1,1,8,2], R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_104, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_104 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL017.positive_104 y u hy⟩
-def criticalLSlice_105 : CertifiedSlice :=
+noncomputable def criticalLSlice_105 : CertifiedSlice :=
  ⟨![1,1,9,1], R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_105, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_105 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL017.positive_105 y u hy⟩
-def criticalLSlice_106 : CertifiedSlice :=
+noncomputable def criticalLSlice_106 : CertifiedSlice :=
  ⟨![1,2,0,9], R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_106, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_106 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL017.positive_106 y u hy⟩
-def criticalLSlice_107 : CertifiedSlice :=
+noncomputable def criticalLSlice_107 : CertifiedSlice :=
  ⟨![1,2,1,8], R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_107, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL017.polynomial_107 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL017.positive_107 y u hy⟩
-def criticalLSlice_108 : CertifiedSlice :=
+noncomputable def criticalLSlice_108 : CertifiedSlice :=
  ⟨![1,2,2,7], R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_108, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_108 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL018.positive_108 y u hy⟩
-def criticalLSlice_109 : CertifiedSlice :=
+noncomputable def criticalLSlice_109 : CertifiedSlice :=
  ⟨![1,2,3,6], R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_109, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_109 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL018.positive_109 y u hy⟩
-def criticalLSlice_110 : CertifiedSlice :=
+noncomputable def criticalLSlice_110 : CertifiedSlice :=
  ⟨![1,2,4,5], R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_110, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_110 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL018.positive_110 y u hy⟩
-def criticalLSlice_111 : CertifiedSlice :=
+noncomputable def criticalLSlice_111 : CertifiedSlice :=
  ⟨![1,2,5,4], R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_111, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_111 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL018.positive_111 y u hy⟩
-def criticalLSlice_112 : CertifiedSlice :=
+noncomputable def criticalLSlice_112 : CertifiedSlice :=
  ⟨![1,2,6,3], R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_112, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_112 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL018.positive_112 y u hy⟩
-def criticalLSlice_113 : CertifiedSlice :=
+noncomputable def criticalLSlice_113 : CertifiedSlice :=
  ⟨![1,2,7,2], R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_113, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL018.polynomial_113 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL018.positive_113 y u hy⟩
-def criticalLSlice_114 : CertifiedSlice :=
+noncomputable def criticalLSlice_114 : CertifiedSlice :=
  ⟨![1,2,8,1], R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_114, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_114 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL019.positive_114 y u hy⟩
-def criticalLSlice_115 : CertifiedSlice :=
+noncomputable def criticalLSlice_115 : CertifiedSlice :=
  ⟨![1,3,0,8], R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_115, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_115 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL019.positive_115 y u hy⟩
-def criticalLSlice_116 : CertifiedSlice :=
+noncomputable def criticalLSlice_116 : CertifiedSlice :=
  ⟨![1,3,1,7], R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_116, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_116 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL019.positive_116 y u hy⟩
-def criticalLSlice_117 : CertifiedSlice :=
+noncomputable def criticalLSlice_117 : CertifiedSlice :=
  ⟨![1,3,2,6], R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_117, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_117 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL019.positive_117 y u hy⟩
-def criticalLSlice_118 : CertifiedSlice :=
+noncomputable def criticalLSlice_118 : CertifiedSlice :=
  ⟨![1,3,3,5], R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_118, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_118 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL019.positive_118 y u hy⟩
-def criticalLSlice_119 : CertifiedSlice :=
+noncomputable def criticalLSlice_119 : CertifiedSlice :=
  ⟨![1,3,4,4], R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_119, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL019.polynomial_119 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL019.positive_119 y u hy⟩
-def criticalLSlice_120 : CertifiedSlice :=
+noncomputable def criticalLSlice_120 : CertifiedSlice :=
  ⟨![1,3,5,3], R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_120, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_120 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL020.positive_120 y u hy⟩
-def criticalLSlice_121 : CertifiedSlice :=
+noncomputable def criticalLSlice_121 : CertifiedSlice :=
  ⟨![1,3,6,2], R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_121, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_121 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL020.positive_121 y u hy⟩
-def criticalLSlice_122 : CertifiedSlice :=
+noncomputable def criticalLSlice_122 : CertifiedSlice :=
  ⟨![1,3,7,1], R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_122, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_122 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL020.positive_122 y u hy⟩
-def criticalLSlice_123 : CertifiedSlice :=
+noncomputable def criticalLSlice_123 : CertifiedSlice :=
  ⟨![1,4,0,7], R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_123, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_123 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL020.positive_123 y u hy⟩
-def criticalLSlice_124 : CertifiedSlice :=
+noncomputable def criticalLSlice_124 : CertifiedSlice :=
  ⟨![1,4,1,6], R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_124, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_124 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL020.positive_124 y u hy⟩
-def criticalLSlice_125 : CertifiedSlice :=
+noncomputable def criticalLSlice_125 : CertifiedSlice :=
  ⟨![1,4,2,5], R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_125, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL020.polynomial_125 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL020.positive_125 y u hy⟩
-def criticalLSlice_126 : CertifiedSlice :=
+noncomputable def criticalLSlice_126 : CertifiedSlice :=
  ⟨![1,4,3,4], R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_126, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_126 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL021.positive_126 y u hy⟩
-def criticalLSlice_127 : CertifiedSlice :=
+noncomputable def criticalLSlice_127 : CertifiedSlice :=
  ⟨![1,4,4,3], R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_127, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_127 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL021.positive_127 y u hy⟩
-def criticalLSlice_128 : CertifiedSlice :=
+noncomputable def criticalLSlice_128 : CertifiedSlice :=
  ⟨![1,4,5,2], R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_128, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_128 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL021.positive_128 y u hy⟩
-def criticalLSlice_129 : CertifiedSlice :=
+noncomputable def criticalLSlice_129 : CertifiedSlice :=
  ⟨![1,4,6,1], R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_129, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_129 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL021.positive_129 y u hy⟩
-def criticalLSlice_130 : CertifiedSlice :=
+noncomputable def criticalLSlice_130 : CertifiedSlice :=
  ⟨![1,5,0,6], R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_130, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_130 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL021.positive_130 y u hy⟩
-def criticalLSlice_131 : CertifiedSlice :=
+noncomputable def criticalLSlice_131 : CertifiedSlice :=
  ⟨![1,5,1,5], R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_131, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL021.polynomial_131 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL021.positive_131 y u hy⟩
-def criticalLSlice_132 : CertifiedSlice :=
+noncomputable def criticalLSlice_132 : CertifiedSlice :=
  ⟨![1,5,2,4], R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_132, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_132 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL022.positive_132 y u hy⟩
-def criticalLSlice_133 : CertifiedSlice :=
+noncomputable def criticalLSlice_133 : CertifiedSlice :=
  ⟨![1,5,3,3], R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_133, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_133 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL022.positive_133 y u hy⟩
-def criticalLSlice_134 : CertifiedSlice :=
+noncomputable def criticalLSlice_134 : CertifiedSlice :=
  ⟨![1,5,4,2], R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_134, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_134 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL022.positive_134 y u hy⟩
-def criticalLSlice_135 : CertifiedSlice :=
+noncomputable def criticalLSlice_135 : CertifiedSlice :=
  ⟨![1,5,5,1], R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_135, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_135 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL022.positive_135 y u hy⟩
-def criticalLSlice_136 : CertifiedSlice :=
+noncomputable def criticalLSlice_136 : CertifiedSlice :=
  ⟨![1,6,0,5], R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_136, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_136 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL022.positive_136 y u hy⟩
-def criticalLSlice_137 : CertifiedSlice :=
+noncomputable def criticalLSlice_137 : CertifiedSlice :=
  ⟨![1,6,1,4], R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_137, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL022.polynomial_137 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL022.positive_137 y u hy⟩
-def criticalLSlice_138 : CertifiedSlice :=
+noncomputable def criticalLSlice_138 : CertifiedSlice :=
  ⟨![1,6,2,3], R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_138, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_138 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL023.positive_138 y u hy⟩
-def criticalLSlice_139 : CertifiedSlice :=
+noncomputable def criticalLSlice_139 : CertifiedSlice :=
  ⟨![1,6,3,2], R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_139, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_139 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL023.positive_139 y u hy⟩
-def criticalLSlice_140 : CertifiedSlice :=
+noncomputable def criticalLSlice_140 : CertifiedSlice :=
  ⟨![1,7,0,4], R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_140, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_140 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL023.positive_140 y u hy⟩
-def criticalLSlice_141 : CertifiedSlice :=
+noncomputable def criticalLSlice_141 : CertifiedSlice :=
  ⟨![1,7,1,3], R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_141, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_141 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL023.positive_141 y u hy⟩
-def criticalLSlice_142 : CertifiedSlice :=
+noncomputable def criticalLSlice_142 : CertifiedSlice :=
  ⟨![1,7,2,2], R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_142, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_142 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL023.positive_142 y u hy⟩
-def criticalLSlice_143 : CertifiedSlice :=
+noncomputable def criticalLSlice_143 : CertifiedSlice :=
  ⟨![1,8,0,3], R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_143, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL023.polynomial_143 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL023.positive_143 y u hy⟩
-def criticalLSlice_144 : CertifiedSlice :=
+noncomputable def criticalLSlice_144 : CertifiedSlice :=
  ⟨![1,8,1,2], R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_144, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_144 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL024.positive_144 y u hy⟩
-def criticalLSlice_145 : CertifiedSlice :=
+noncomputable def criticalLSlice_145 : CertifiedSlice :=
  ⟨![1,9,0,2], R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_145, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_145 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL024.positive_145 y u hy⟩
-def criticalLSlice_146 : CertifiedSlice :=
+noncomputable def criticalLSlice_146 : CertifiedSlice :=
  ⟨![2,0,0,10], R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_146, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_146 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL024.positive_146 y u hy⟩
-def criticalLSlice_147 : CertifiedSlice :=
+noncomputable def criticalLSlice_147 : CertifiedSlice :=
  ⟨![2,0,1,9], R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_147, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_147 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL024.positive_147 y u hy⟩
-def criticalLSlice_148 : CertifiedSlice :=
+noncomputable def criticalLSlice_148 : CertifiedSlice :=
  ⟨![2,0,2,8], R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_148, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_148 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL024.positive_148 y u hy⟩
-def criticalLSlice_149 : CertifiedSlice :=
+noncomputable def criticalLSlice_149 : CertifiedSlice :=
  ⟨![2,0,3,7], R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_149, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL024.polynomial_149 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL024.positive_149 y u hy⟩
-def criticalLSlice_150 : CertifiedSlice :=
+noncomputable def criticalLSlice_150 : CertifiedSlice :=
  ⟨![2,0,4,6], R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_150, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_150 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL025.positive_150 y u hy⟩
-def criticalLSlice_151 : CertifiedSlice :=
+noncomputable def criticalLSlice_151 : CertifiedSlice :=
  ⟨![2,0,5,5], R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_151, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_151 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL025.positive_151 y u hy⟩
-def criticalLSlice_152 : CertifiedSlice :=
+noncomputable def criticalLSlice_152 : CertifiedSlice :=
  ⟨![2,0,6,4], R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_152, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_152 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL025.positive_152 y u hy⟩
-def criticalLSlice_153 : CertifiedSlice :=
+noncomputable def criticalLSlice_153 : CertifiedSlice :=
  ⟨![2,0,7,3], R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_153, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_153 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL025.positive_153 y u hy⟩
-def criticalLSlice_154 : CertifiedSlice :=
+noncomputable def criticalLSlice_154 : CertifiedSlice :=
  ⟨![2,0,8,2], R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_154, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_154 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL025.positive_154 y u hy⟩
-def criticalLSlice_155 : CertifiedSlice :=
+noncomputable def criticalLSlice_155 : CertifiedSlice :=
  ⟨![2,1,0,9], R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_155, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL025.polynomial_155 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL025.positive_155 y u hy⟩
-def criticalLSlice_156 : CertifiedSlice :=
+noncomputable def criticalLSlice_156 : CertifiedSlice :=
  ⟨![2,1,1,8], R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_156, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_156 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL026.positive_156 y u hy⟩
-def criticalLSlice_157 : CertifiedSlice :=
+noncomputable def criticalLSlice_157 : CertifiedSlice :=
  ⟨![2,1,2,7], R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_157, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_157 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL026.positive_157 y u hy⟩
-def criticalLSlice_158 : CertifiedSlice :=
+noncomputable def criticalLSlice_158 : CertifiedSlice :=
  ⟨![2,1,3,6], R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_158, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_158 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL026.positive_158 y u hy⟩
-def criticalLSlice_159 : CertifiedSlice :=
+noncomputable def criticalLSlice_159 : CertifiedSlice :=
  ⟨![2,1,4,5], R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_159, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_159 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL026.positive_159 y u hy⟩
-def criticalLSlice_160 : CertifiedSlice :=
+noncomputable def criticalLSlice_160 : CertifiedSlice :=
  ⟨![2,1,5,4], R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_160, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_160 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL026.positive_160 y u hy⟩
-def criticalLSlice_161 : CertifiedSlice :=
+noncomputable def criticalLSlice_161 : CertifiedSlice :=
  ⟨![2,1,6,3], R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_161, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL026.polynomial_161 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL026.positive_161 y u hy⟩
-def criticalLSlice_162 : CertifiedSlice :=
+noncomputable def criticalLSlice_162 : CertifiedSlice :=
  ⟨![2,1,7,2], R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_162, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_162 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL027.positive_162 y u hy⟩
-def criticalLSlice_163 : CertifiedSlice :=
+noncomputable def criticalLSlice_163 : CertifiedSlice :=
  ⟨![2,2,0,8], R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_163, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_163 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL027.positive_163 y u hy⟩
-def criticalLSlice_164 : CertifiedSlice :=
+noncomputable def criticalLSlice_164 : CertifiedSlice :=
  ⟨![2,2,1,7], R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_164, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_164 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL027.positive_164 y u hy⟩
-def criticalLSlice_165 : CertifiedSlice :=
+noncomputable def criticalLSlice_165 : CertifiedSlice :=
  ⟨![2,2,2,6], R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_165, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_165 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL027.positive_165 y u hy⟩
-def criticalLSlice_166 : CertifiedSlice :=
+noncomputable def criticalLSlice_166 : CertifiedSlice :=
  ⟨![2,2,3,5], R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_166, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_166 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL027.positive_166 y u hy⟩
-def criticalLSlice_167 : CertifiedSlice :=
+noncomputable def criticalLSlice_167 : CertifiedSlice :=
  ⟨![2,2,4,4], R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_167, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL027.polynomial_167 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL027.positive_167 y u hy⟩
-def criticalLSlice_168 : CertifiedSlice :=
+noncomputable def criticalLSlice_168 : CertifiedSlice :=
  ⟨![2,2,5,3], R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_168, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_168 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL028.positive_168 y u hy⟩
-def criticalLSlice_169 : CertifiedSlice :=
+noncomputable def criticalLSlice_169 : CertifiedSlice :=
  ⟨![2,2,6,2], R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_169, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_169 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL028.positive_169 y u hy⟩
-def criticalLSlice_170 : CertifiedSlice :=
+noncomputable def criticalLSlice_170 : CertifiedSlice :=
  ⟨![2,3,0,7], R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_170, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_170 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL028.positive_170 y u hy⟩
-def criticalLSlice_171 : CertifiedSlice :=
+noncomputable def criticalLSlice_171 : CertifiedSlice :=
  ⟨![2,3,1,6], R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_171, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_171 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL028.positive_171 y u hy⟩
-def criticalLSlice_172 : CertifiedSlice :=
+noncomputable def criticalLSlice_172 : CertifiedSlice :=
  ⟨![2,3,2,5], R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_172, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_172 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL028.positive_172 y u hy⟩
-def criticalLSlice_173 : CertifiedSlice :=
+noncomputable def criticalLSlice_173 : CertifiedSlice :=
  ⟨![2,3,3,4], R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_173, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL028.polynomial_173 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL028.positive_173 y u hy⟩
-def criticalLSlice_174 : CertifiedSlice :=
+noncomputable def criticalLSlice_174 : CertifiedSlice :=
  ⟨![2,3,4,3], R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_174, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_174 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL029.positive_174 y u hy⟩
-def criticalLSlice_175 : CertifiedSlice :=
+noncomputable def criticalLSlice_175 : CertifiedSlice :=
  ⟨![2,3,5,2], R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_175, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_175 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL029.positive_175 y u hy⟩
-def criticalLSlice_176 : CertifiedSlice :=
+noncomputable def criticalLSlice_176 : CertifiedSlice :=
  ⟨![2,4,0,6], R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_176, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_176 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL029.positive_176 y u hy⟩
-def criticalLSlice_177 : CertifiedSlice :=
+noncomputable def criticalLSlice_177 : CertifiedSlice :=
  ⟨![2,4,1,5], R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_177, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_177 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL029.positive_177 y u hy⟩
-def criticalLSlice_178 : CertifiedSlice :=
+noncomputable def criticalLSlice_178 : CertifiedSlice :=
  ⟨![2,4,2,4], R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_178, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_178 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL029.positive_178 y u hy⟩
-def criticalLSlice_179 : CertifiedSlice :=
+noncomputable def criticalLSlice_179 : CertifiedSlice :=
  ⟨![2,4,3,3], R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_179, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL029.polynomial_179 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL029.positive_179 y u hy⟩
-def criticalLSlice_180 : CertifiedSlice :=
+noncomputable def criticalLSlice_180 : CertifiedSlice :=
  ⟨![2,4,4,2], R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_180, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_180 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL030.positive_180 y u hy⟩
-def criticalLSlice_181 : CertifiedSlice :=
+noncomputable def criticalLSlice_181 : CertifiedSlice :=
  ⟨![2,5,0,5], R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_181, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_181 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL030.positive_181 y u hy⟩
-def criticalLSlice_182 : CertifiedSlice :=
+noncomputable def criticalLSlice_182 : CertifiedSlice :=
  ⟨![2,5,1,4], R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_182, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_182 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL030.positive_182 y u hy⟩
-def criticalLSlice_183 : CertifiedSlice :=
+noncomputable def criticalLSlice_183 : CertifiedSlice :=
  ⟨![2,5,2,3], R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_183, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_183 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL030.positive_183 y u hy⟩
-def criticalLSlice_184 : CertifiedSlice :=
+noncomputable def criticalLSlice_184 : CertifiedSlice :=
  ⟨![2,6,0,4], R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_184, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_184 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL030.positive_184 y u hy⟩
-def criticalLSlice_185 : CertifiedSlice :=
+noncomputable def criticalLSlice_185 : CertifiedSlice :=
  ⟨![2,6,1,3], R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_185, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL030.polynomial_185 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL030.positive_185 y u hy⟩
-def criticalLSlice_186 : CertifiedSlice :=
+noncomputable def criticalLSlice_186 : CertifiedSlice :=
  ⟨![2,7,0,3], R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_186, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_186 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL031.positive_186 y u hy⟩
-def criticalLSlice_187 : CertifiedSlice :=
+noncomputable def criticalLSlice_187 : CertifiedSlice :=
  ⟨![3,0,0,9], R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_187, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_187 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL031.positive_187 y u hy⟩
-def criticalLSlice_188 : CertifiedSlice :=
+noncomputable def criticalLSlice_188 : CertifiedSlice :=
  ⟨![3,0,1,8], R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_188, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_188 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL031.positive_188 y u hy⟩
-def criticalLSlice_189 : CertifiedSlice :=
+noncomputable def criticalLSlice_189 : CertifiedSlice :=
  ⟨![3,0,2,7], R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_189, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_189 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL031.positive_189 y u hy⟩
-def criticalLSlice_190 : CertifiedSlice :=
+noncomputable def criticalLSlice_190 : CertifiedSlice :=
  ⟨![3,0,3,6], R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_190, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_190 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL031.positive_190 y u hy⟩
-def criticalLSlice_191 : CertifiedSlice :=
+noncomputable def criticalLSlice_191 : CertifiedSlice :=
  ⟨![3,0,4,5], R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_191, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL031.polynomial_191 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL031.positive_191 y u hy⟩
-def criticalLSlice_192 : CertifiedSlice :=
+noncomputable def criticalLSlice_192 : CertifiedSlice :=
  ⟨![3,0,5,4], R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_192, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_192 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL032.positive_192 y u hy⟩
-def criticalLSlice_193 : CertifiedSlice :=
+noncomputable def criticalLSlice_193 : CertifiedSlice :=
  ⟨![3,0,6,3], R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_193, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_193 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL032.positive_193 y u hy⟩
-def criticalLSlice_194 : CertifiedSlice :=
+noncomputable def criticalLSlice_194 : CertifiedSlice :=
  ⟨![3,1,0,8], R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_194, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_194 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL032.positive_194 y u hy⟩
-def criticalLSlice_195 : CertifiedSlice :=
+noncomputable def criticalLSlice_195 : CertifiedSlice :=
  ⟨![3,1,1,7], R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_195, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_195 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL032.positive_195 y u hy⟩
-def criticalLSlice_196 : CertifiedSlice :=
+noncomputable def criticalLSlice_196 : CertifiedSlice :=
  ⟨![3,1,2,6], R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_196, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_196 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL032.positive_196 y u hy⟩
-def criticalLSlice_197 : CertifiedSlice :=
+noncomputable def criticalLSlice_197 : CertifiedSlice :=
  ⟨![3,1,3,5], R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_197, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL032.polynomial_197 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL032.positive_197 y u hy⟩
-def criticalLSlice_198 : CertifiedSlice :=
+noncomputable def criticalLSlice_198 : CertifiedSlice :=
  ⟨![3,1,4,4], R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_198, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_198 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL033.positive_198 y u hy⟩
-def criticalLSlice_199 : CertifiedSlice :=
+noncomputable def criticalLSlice_199 : CertifiedSlice :=
  ⟨![3,1,5,3], R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_199, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_199 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL033.positive_199 y u hy⟩
-def criticalLSlice_200 : CertifiedSlice :=
+noncomputable def criticalLSlice_200 : CertifiedSlice :=
  ⟨![3,2,0,7], R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_200, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_200 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL033.positive_200 y u hy⟩
-def criticalLSlice_201 : CertifiedSlice :=
+noncomputable def criticalLSlice_201 : CertifiedSlice :=
  ⟨![3,2,1,6], R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_201, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_201 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL033.positive_201 y u hy⟩
-def criticalLSlice_202 : CertifiedSlice :=
+noncomputable def criticalLSlice_202 : CertifiedSlice :=
  ⟨![3,2,2,5], R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_202, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_202 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL033.positive_202 y u hy⟩
-def criticalLSlice_203 : CertifiedSlice :=
+noncomputable def criticalLSlice_203 : CertifiedSlice :=
  ⟨![3,2,3,4], R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_203, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL033.polynomial_203 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL033.positive_203 y u hy⟩
-def criticalLSlice_204 : CertifiedSlice :=
+noncomputable def criticalLSlice_204 : CertifiedSlice :=
  ⟨![3,2,4,3], R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_204, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_204 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL034.positive_204 y u hy⟩
-def criticalLSlice_205 : CertifiedSlice :=
+noncomputable def criticalLSlice_205 : CertifiedSlice :=
  ⟨![3,3,0,6], R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_205, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_205 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL034.positive_205 y u hy⟩
-def criticalLSlice_206 : CertifiedSlice :=
+noncomputable def criticalLSlice_206 : CertifiedSlice :=
  ⟨![3,3,1,5], R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_206, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_206 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL034.positive_206 y u hy⟩
-def criticalLSlice_207 : CertifiedSlice :=
+noncomputable def criticalLSlice_207 : CertifiedSlice :=
  ⟨![3,3,2,4], R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_207, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_207 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL034.positive_207 y u hy⟩
-def criticalLSlice_208 : CertifiedSlice :=
+noncomputable def criticalLSlice_208 : CertifiedSlice :=
  ⟨![3,3,3,3], R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_208, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_208 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL034.positive_208 y u hy⟩
-def criticalLSlice_209 : CertifiedSlice :=
+noncomputable def criticalLSlice_209 : CertifiedSlice :=
  ⟨![3,4,0,5], R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_209, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL034.polynomial_209 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL034.positive_209 y u hy⟩
-def criticalLSlice_210 : CertifiedSlice :=
+noncomputable def criticalLSlice_210 : CertifiedSlice :=
  ⟨![3,4,1,4], R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_210, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_210 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL035.positive_210 y u hy⟩
-def criticalLSlice_211 : CertifiedSlice :=
+noncomputable def criticalLSlice_211 : CertifiedSlice :=
  ⟨![3,5,0,4], R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_211, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_211 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL035.positive_211 y u hy⟩
-def criticalLSlice_212 : CertifiedSlice :=
+noncomputable def criticalLSlice_212 : CertifiedSlice :=
  ⟨![4,0,0,8], R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_212, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_212 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL035.positive_212 y u hy⟩
-def criticalLSlice_213 : CertifiedSlice :=
+noncomputable def criticalLSlice_213 : CertifiedSlice :=
  ⟨![4,0,1,7], R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_213, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_213 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL035.positive_213 y u hy⟩
-def criticalLSlice_214 : CertifiedSlice :=
+noncomputable def criticalLSlice_214 : CertifiedSlice :=
  ⟨![4,0,2,6], R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_214, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_214 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL035.positive_214 y u hy⟩
-def criticalLSlice_215 : CertifiedSlice :=
+noncomputable def criticalLSlice_215 : CertifiedSlice :=
  ⟨![4,0,3,5], R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_215, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL035.polynomial_215 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL035.positive_215 y u hy⟩
-def criticalLSlice_216 : CertifiedSlice :=
+noncomputable def criticalLSlice_216 : CertifiedSlice :=
  ⟨![4,0,4,4], R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_216, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_216 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL036.positive_216 y u hy⟩
-def criticalLSlice_217 : CertifiedSlice :=
+noncomputable def criticalLSlice_217 : CertifiedSlice :=
  ⟨![4,1,0,7], R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_217, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_217 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL036.positive_217 y u hy⟩
-def criticalLSlice_218 : CertifiedSlice :=
+noncomputable def criticalLSlice_218 : CertifiedSlice :=
  ⟨![4,1,1,6], R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_218, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_218 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL036.positive_218 y u hy⟩
-def criticalLSlice_219 : CertifiedSlice :=
+noncomputable def criticalLSlice_219 : CertifiedSlice :=
  ⟨![4,1,2,5], R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_219, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_219 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL036.positive_219 y u hy⟩
-def criticalLSlice_220 : CertifiedSlice :=
+noncomputable def criticalLSlice_220 : CertifiedSlice :=
  ⟨![4,1,3,4], R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_220, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_220 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL036.positive_220 y u hy⟩
-def criticalLSlice_221 : CertifiedSlice :=
+noncomputable def criticalLSlice_221 : CertifiedSlice :=
  ⟨![4,2,0,6], R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_221, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL036.polynomial_221 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL036.positive_221 y u hy⟩
-def criticalLSlice_222 : CertifiedSlice :=
+noncomputable def criticalLSlice_222 : CertifiedSlice :=
  ⟨![4,2,1,5], R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_222, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_222 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL037.positive_222 y u hy⟩
-def criticalLSlice_223 : CertifiedSlice :=
+noncomputable def criticalLSlice_223 : CertifiedSlice :=
  ⟨![4,2,2,4], R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_223, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_223 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL037.positive_223 y u hy⟩
-def criticalLSlice_224 : CertifiedSlice :=
+noncomputable def criticalLSlice_224 : CertifiedSlice :=
  ⟨![4,3,0,5], R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_224, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_224 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL037.positive_224 y u hy⟩
-def criticalLSlice_225 : CertifiedSlice :=
+noncomputable def criticalLSlice_225 : CertifiedSlice :=
  ⟨![5,0,0,7], R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_225, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_225 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL037.positive_225 y u hy⟩
-def criticalLSlice_226 : CertifiedSlice :=
+noncomputable def criticalLSlice_226 : CertifiedSlice :=
  ⟨![5,0,1,6], R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_226, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_226 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL037.positive_226 y u hy⟩
-def criticalLSlice_227 : CertifiedSlice :=
+noncomputable def criticalLSlice_227 : CertifiedSlice :=
  ⟨![5,0,2,5], R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_227, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL037.polynomial_227 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL037.positive_227 y u hy⟩
-def criticalLSlice_228 : CertifiedSlice :=
+noncomputable def criticalLSlice_228 : CertifiedSlice :=
  ⟨![5,1,0,6], R7.Core.SpectralSliceCertificates.CriticalL038.polynomial_228, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL038.polynomial_228 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL038.positive_228 y u hy⟩
-def criticalLSlice_229 : CertifiedSlice :=
+noncomputable def criticalLSlice_229 : CertifiedSlice :=
  ⟨![5,1,1,5], R7.Core.SpectralSliceCertificates.CriticalL038.polynomial_229, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL038.polynomial_229 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL038.positive_229 y u hy⟩
-def criticalLSlice_230 : CertifiedSlice :=
+noncomputable def criticalLSlice_230 : CertifiedSlice :=
  ⟨![6,0,0,6], R7.Core.SpectralSliceCertificates.CriticalL038.polynomial_230, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 13, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalL038.polynomial_230 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalL038.positive_230 y u hy⟩
-def criticalLCertified : List CertifiedSlice := [
+noncomputable def criticalLCertified : List CertifiedSlice := [
  criticalLSlice_0,
  criticalLSlice_1,
  criticalLSlice_2,
@@ -4158,607 +4159,607 @@ def criticalLCertified : List CertifiedSlice := [
  CertifiedSlice.reflected ![11,1,0,0] (criticalLSlice_1),
  CertifiedSlice.reflected ![12,0,0,0] (criticalLSlice_0)
 ]
-def criticalLGroups : Groups := criticalLCertified.map CertifiedSlice.row
+noncomputable def criticalLGroups : Groups := criticalLCertified.map CertifiedSlice.row
 theorem criticalLGroups_positive (row) (hrow : row ∈ criticalLGroups) (u y : ℝ) (hy : 0 ≤ y) :
  0 < eval row.2 u y := certifiedRows_positive criticalLCertified row hrow u y hy
 theorem criticalLGroups_short : ∀ row ∈ criticalLGroups, ∀ a ∈ row.2, a.length ≤ 3 := by
  decide +kernel
-def criticalQ8Slice_0 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_0 : CertifiedSlice :=
  ⟨![0,0,0,8], R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_0, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_0 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8000.positive_0 y u hy⟩
-def criticalQ8Slice_1 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_1 : CertifiedSlice :=
  ⟨![0,0,1,7], R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_1, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_1 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8000.positive_1 y u hy⟩
-def criticalQ8Slice_2 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_2 : CertifiedSlice :=
  ⟨![0,0,2,6], R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_2, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_2 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8000.positive_2 y u hy⟩
-def criticalQ8Slice_3 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_3 : CertifiedSlice :=
  ⟨![0,0,3,5], R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_3, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_3 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8000.positive_3 y u hy⟩
-def criticalQ8Slice_4 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_4 : CertifiedSlice :=
  ⟨![0,0,4,4], R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_4, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_4 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8000.positive_4 y u hy⟩
-def criticalQ8Slice_5 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_5 : CertifiedSlice :=
  ⟨![0,0,5,3], R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_5, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8000.polynomial_5 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8000.positive_5 y u hy⟩
-def criticalQ8Slice_6 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_6 : CertifiedSlice :=
  ⟨![0,0,6,2], R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_6, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_6 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8001.positive_6 y u hy⟩
-def criticalQ8Slice_7 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_7 : CertifiedSlice :=
  ⟨![0,0,7,1], R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_7, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_7 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8001.positive_7 y u hy⟩
-def criticalQ8Slice_8 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_8 : CertifiedSlice :=
  ⟨![0,0,8,0], R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_8, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_8 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8001.positive_8 y u hy⟩
-def criticalQ8Slice_9 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_9 : CertifiedSlice :=
  ⟨![0,1,0,7], R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_9, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_9 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8001.positive_9 y u hy⟩
-def criticalQ8Slice_10 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_10 : CertifiedSlice :=
  ⟨![0,1,1,6], R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_10, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_10 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8001.positive_10 y u hy⟩
-def criticalQ8Slice_11 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_11 : CertifiedSlice :=
  ⟨![0,1,2,5], R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_11, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8001.polynomial_11 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8001.positive_11 y u hy⟩
-def criticalQ8Slice_12 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_12 : CertifiedSlice :=
  ⟨![0,1,3,4], R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_12, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_12 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8002.positive_12 y u hy⟩
-def criticalQ8Slice_13 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_13 : CertifiedSlice :=
  ⟨![0,1,4,3], R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_13, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_13 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8002.positive_13 y u hy⟩
-def criticalQ8Slice_14 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_14 : CertifiedSlice :=
  ⟨![0,1,5,2], R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_14, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_14 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8002.positive_14 y u hy⟩
-def criticalQ8Slice_15 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_15 : CertifiedSlice :=
  ⟨![0,1,6,1], R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_15, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_15 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8002.positive_15 y u hy⟩
-def criticalQ8Slice_16 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_16 : CertifiedSlice :=
  ⟨![0,1,7,0], R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_16, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_16 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8002.positive_16 y u hy⟩
-def criticalQ8Slice_17 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_17 : CertifiedSlice :=
  ⟨![0,2,0,6], R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_17, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8002.polynomial_17 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8002.positive_17 y u hy⟩
-def criticalQ8Slice_18 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_18 : CertifiedSlice :=
  ⟨![0,2,1,5], R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_18, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_18 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8003.positive_18 y u hy⟩
-def criticalQ8Slice_19 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_19 : CertifiedSlice :=
  ⟨![0,2,2,4], R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_19, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_19 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8003.positive_19 y u hy⟩
-def criticalQ8Slice_20 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_20 : CertifiedSlice :=
  ⟨![0,2,3,3], R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_20, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_20 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8003.positive_20 y u hy⟩
-def criticalQ8Slice_21 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_21 : CertifiedSlice :=
  ⟨![0,2,4,2], R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_21, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_21 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8003.positive_21 y u hy⟩
-def criticalQ8Slice_22 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_22 : CertifiedSlice :=
  ⟨![0,2,5,1], R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_22, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_22 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8003.positive_22 y u hy⟩
-def criticalQ8Slice_23 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_23 : CertifiedSlice :=
  ⟨![0,2,6,0], R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_23, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8003.polynomial_23 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8003.positive_23 y u hy⟩
-def criticalQ8Slice_24 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_24 : CertifiedSlice :=
  ⟨![0,3,0,5], R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_24, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_24 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8004.positive_24 y u hy⟩
-def criticalQ8Slice_25 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_25 : CertifiedSlice :=
  ⟨![0,3,1,4], R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_25, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_25 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8004.positive_25 y u hy⟩
-def criticalQ8Slice_26 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_26 : CertifiedSlice :=
  ⟨![0,3,2,3], R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_26, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_26 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8004.positive_26 y u hy⟩
-def criticalQ8Slice_27 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_27 : CertifiedSlice :=
  ⟨![0,3,3,2], R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_27, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_27 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8004.positive_27 y u hy⟩
-def criticalQ8Slice_28 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_28 : CertifiedSlice :=
  ⟨![0,3,4,1], R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_28, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_28 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8004.positive_28 y u hy⟩
-def criticalQ8Slice_29 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_29 : CertifiedSlice :=
  ⟨![0,3,5,0], R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_29, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8004.polynomial_29 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8004.positive_29 y u hy⟩
-def criticalQ8Slice_30 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_30 : CertifiedSlice :=
  ⟨![0,4,0,4], R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_30, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_30 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8005.positive_30 y u hy⟩
-def criticalQ8Slice_31 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_31 : CertifiedSlice :=
  ⟨![0,4,1,3], R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_31, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_31 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8005.positive_31 y u hy⟩
-def criticalQ8Slice_32 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_32 : CertifiedSlice :=
  ⟨![0,4,2,2], R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_32, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_32 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8005.positive_32 y u hy⟩
-def criticalQ8Slice_33 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_33 : CertifiedSlice :=
  ⟨![0,4,3,1], R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_33, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_33 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8005.positive_33 y u hy⟩
-def criticalQ8Slice_34 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_34 : CertifiedSlice :=
  ⟨![0,4,4,0], R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_34, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_34 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8005.positive_34 y u hy⟩
-def criticalQ8Slice_35 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_35 : CertifiedSlice :=
  ⟨![0,5,0,3], R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_35, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8005.polynomial_35 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8005.positive_35 y u hy⟩
-def criticalQ8Slice_36 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_36 : CertifiedSlice :=
  ⟨![0,5,1,2], R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_36, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_36 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8006.positive_36 y u hy⟩
-def criticalQ8Slice_37 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_37 : CertifiedSlice :=
  ⟨![0,5,2,1], R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_37, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_37 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8006.positive_37 y u hy⟩
-def criticalQ8Slice_38 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_38 : CertifiedSlice :=
  ⟨![0,6,0,2], R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_38, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_38 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8006.positive_38 y u hy⟩
-def criticalQ8Slice_39 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_39 : CertifiedSlice :=
  ⟨![0,6,1,1], R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_39, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_39 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8006.positive_39 y u hy⟩
-def criticalQ8Slice_40 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_40 : CertifiedSlice :=
  ⟨![0,7,0,1], R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_40, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_40 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8006.positive_40 y u hy⟩
-def criticalQ8Slice_41 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_41 : CertifiedSlice :=
  ⟨![1,0,0,7], R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_41, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8006.polynomial_41 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8006.positive_41 y u hy⟩
-def criticalQ8Slice_42 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_42 : CertifiedSlice :=
  ⟨![1,0,1,6], R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_42, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_42 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8007.positive_42 y u hy⟩
-def criticalQ8Slice_43 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_43 : CertifiedSlice :=
  ⟨![1,0,2,5], R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_43, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_43 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8007.positive_43 y u hy⟩
-def criticalQ8Slice_44 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_44 : CertifiedSlice :=
  ⟨![1,0,3,4], R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_44, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_44 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8007.positive_44 y u hy⟩
-def criticalQ8Slice_45 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_45 : CertifiedSlice :=
  ⟨![1,0,4,3], R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_45, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_45 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8007.positive_45 y u hy⟩
-def criticalQ8Slice_46 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_46 : CertifiedSlice :=
  ⟨![1,0,5,2], R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_46, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_46 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8007.positive_46 y u hy⟩
-def criticalQ8Slice_47 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_47 : CertifiedSlice :=
  ⟨![1,0,6,1], R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_47, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8007.polynomial_47 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8007.positive_47 y u hy⟩
-def criticalQ8Slice_48 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_48 : CertifiedSlice :=
  ⟨![1,1,0,6], R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_48, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_48 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8008.positive_48 y u hy⟩
-def criticalQ8Slice_49 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_49 : CertifiedSlice :=
  ⟨![1,1,1,5], R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_49, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_49 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8008.positive_49 y u hy⟩
-def criticalQ8Slice_50 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_50 : CertifiedSlice :=
  ⟨![1,1,2,4], R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_50, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_50 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8008.positive_50 y u hy⟩
-def criticalQ8Slice_51 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_51 : CertifiedSlice :=
  ⟨![1,1,3,3], R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_51, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_51 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8008.positive_51 y u hy⟩
-def criticalQ8Slice_52 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_52 : CertifiedSlice :=
  ⟨![1,1,4,2], R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_52, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_52 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8008.positive_52 y u hy⟩
-def criticalQ8Slice_53 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_53 : CertifiedSlice :=
  ⟨![1,1,5,1], R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_53, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8008.polynomial_53 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8008.positive_53 y u hy⟩
-def criticalQ8Slice_54 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_54 : CertifiedSlice :=
  ⟨![1,2,0,5], R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_54, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_54 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8009.positive_54 y u hy⟩
-def criticalQ8Slice_55 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_55 : CertifiedSlice :=
  ⟨![1,2,1,4], R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_55, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_55 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8009.positive_55 y u hy⟩
-def criticalQ8Slice_56 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_56 : CertifiedSlice :=
  ⟨![1,2,2,3], R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_56, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_56 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8009.positive_56 y u hy⟩
-def criticalQ8Slice_57 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_57 : CertifiedSlice :=
  ⟨![1,2,3,2], R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_57, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_57 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8009.positive_57 y u hy⟩
-def criticalQ8Slice_58 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_58 : CertifiedSlice :=
  ⟨![1,2,4,1], R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_58, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_58 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8009.positive_58 y u hy⟩
-def criticalQ8Slice_59 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_59 : CertifiedSlice :=
  ⟨![1,3,0,4], R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_59, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8009.polynomial_59 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8009.positive_59 y u hy⟩
-def criticalQ8Slice_60 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_60 : CertifiedSlice :=
  ⟨![1,3,1,3], R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_60, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_60 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8010.positive_60 y u hy⟩
-def criticalQ8Slice_61 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_61 : CertifiedSlice :=
  ⟨![1,3,2,2], R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_61, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_61 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8010.positive_61 y u hy⟩
-def criticalQ8Slice_62 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_62 : CertifiedSlice :=
  ⟨![1,3,3,1], R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_62, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_62 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8010.positive_62 y u hy⟩
-def criticalQ8Slice_63 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_63 : CertifiedSlice :=
  ⟨![1,4,0,3], R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_63, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_63 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8010.positive_63 y u hy⟩
-def criticalQ8Slice_64 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_64 : CertifiedSlice :=
  ⟨![1,4,1,2], R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_64, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_64 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8010.positive_64 y u hy⟩
-def criticalQ8Slice_65 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_65 : CertifiedSlice :=
  ⟨![1,5,0,2], R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_65, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8010.polynomial_65 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8010.positive_65 y u hy⟩
-def criticalQ8Slice_66 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_66 : CertifiedSlice :=
  ⟨![2,0,0,6], R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_66, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_66 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8011.positive_66 y u hy⟩
-def criticalQ8Slice_67 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_67 : CertifiedSlice :=
  ⟨![2,0,1,5], R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_67, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_67 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8011.positive_67 y u hy⟩
-def criticalQ8Slice_68 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_68 : CertifiedSlice :=
  ⟨![2,0,2,4], R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_68, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_68 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8011.positive_68 y u hy⟩
-def criticalQ8Slice_69 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_69 : CertifiedSlice :=
  ⟨![2,0,3,3], R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_69, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_69 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8011.positive_69 y u hy⟩
-def criticalQ8Slice_70 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_70 : CertifiedSlice :=
  ⟨![2,0,4,2], R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_70, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_70 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8011.positive_70 y u hy⟩
-def criticalQ8Slice_71 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_71 : CertifiedSlice :=
  ⟨![2,1,0,5], R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_71, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8011.polynomial_71 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8011.positive_71 y u hy⟩
-def criticalQ8Slice_72 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_72 : CertifiedSlice :=
  ⟨![2,1,1,4], R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_72, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_72 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8012.positive_72 y u hy⟩
-def criticalQ8Slice_73 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_73 : CertifiedSlice :=
  ⟨![2,1,2,3], R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_73, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_73 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8012.positive_73 y u hy⟩
-def criticalQ8Slice_74 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_74 : CertifiedSlice :=
  ⟨![2,1,3,2], R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_74, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_74 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8012.positive_74 y u hy⟩
-def criticalQ8Slice_75 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_75 : CertifiedSlice :=
  ⟨![2,2,0,4], R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_75, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_75 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8012.positive_75 y u hy⟩
-def criticalQ8Slice_76 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_76 : CertifiedSlice :=
  ⟨![2,2,1,3], R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_76, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_76 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8012.positive_76 y u hy⟩
-def criticalQ8Slice_77 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_77 : CertifiedSlice :=
  ⟨![2,2,2,2], R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_77, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8012.polynomial_77 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8012.positive_77 y u hy⟩
-def criticalQ8Slice_78 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_78 : CertifiedSlice :=
  ⟨![2,3,0,3], R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_78, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_78 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8013.positive_78 y u hy⟩
-def criticalQ8Slice_79 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_79 : CertifiedSlice :=
  ⟨![3,0,0,5], R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_79, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_79 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8013.positive_79 y u hy⟩
-def criticalQ8Slice_80 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_80 : CertifiedSlice :=
  ⟨![3,0,1,4], R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_80, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_80 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8013.positive_80 y u hy⟩
-def criticalQ8Slice_81 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_81 : CertifiedSlice :=
  ⟨![3,0,2,3], R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_81, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_81 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8013.positive_81 y u hy⟩
-def criticalQ8Slice_82 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_82 : CertifiedSlice :=
  ⟨![3,1,0,4], R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_82, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_82 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8013.positive_82 y u hy⟩
-def criticalQ8Slice_83 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_83 : CertifiedSlice :=
  ⟨![3,1,1,3], R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_83, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8013.polynomial_83 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8013.positive_83 y u hy⟩
-def criticalQ8Slice_84 : CertifiedSlice :=
+noncomputable def criticalQ8Slice_84 : CertifiedSlice :=
  ⟨![4,0,0,4], R7.Core.SpectralSliceCertificates.CriticalQ8014.polynomial_84, by
    intro u y hy
    rw [eval_eq_sum]
    change 0 < ∑ k ∈ Finset.range 9, R7.Core.Univariate.evaluate
      (R7.Core.MinorCertificates.coefficient R7.Core.SpectralSliceCertificates.CriticalQ8014.polynomial_84 k) y*u^k
    exact R7.Core.SpectralSliceCertificates.CriticalQ8014.positive_84 y u hy⟩
-def criticalQ8Certified : List CertifiedSlice := [
+noncomputable def criticalQ8Certified : List CertifiedSlice := [
  criticalQ8Slice_0,
  criticalQ8Slice_1,
  criticalQ8Slice_2,
@@ -4925,7 +4926,7 @@ def criticalQ8Certified : List CertifiedSlice := [
  CertifiedSlice.reflected ![7,1,0,0] (criticalQ8Slice_1),
  CertifiedSlice.reflected ![8,0,0,0] (criticalQ8Slice_0)
 ]
-def criticalQ8Groups : Groups := criticalQ8Certified.map CertifiedSlice.row
+noncomputable def criticalQ8Groups : Groups := criticalQ8Certified.map CertifiedSlice.row
 theorem criticalQ8Groups_positive (row) (hrow : row ∈ criticalQ8Groups) (u y : ℝ) (hy : 0 ≤ y) :
  0 < eval row.2 u y := certifiedRows_positive criticalQ8Certified row hrow u y hy
 theorem criticalQ8Groups_short : ∀ row ∈ criticalQ8Groups, ∀ a ∈ row.2, a.length ≤ 3 := by

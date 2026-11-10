@@ -13,13 +13,10 @@ def basis : BasisMatrix := fun j a =>
  else (if j.val = a.val then 1 else 0) - (1 + 1 / Real.sqrt 6) / 5
 
 theorem basis_valid : IsTraceFreeOrthonormalBasis basis := by
- have hs : Real.sqrt (6:ℝ) ^ 2 = 6 := Real.sq_sqrt (by norm_num)
- have hn : Real.sqrt (6:ℝ) ≠ 0 := ne_of_gt (Real.sqrt_pos.2 (by norm_num))
  constructor
  · ext a b
    fin_cases a <;> fin_cases b <;>
-    norm_num [basis, Matrix.mul_apply, Matrix.transpose_apply, Fin.sum_univ_succ, Matrix.one_apply] <;>
-    field_simp <;> nlinarith
+    norm_num [basis, Matrix.mul_apply, Matrix.transpose_apply, Fin.sum_univ_succ, Matrix.one_apply]
  · intro a
    fin_cases a <;> norm_num [basis, Fin.sum_univ_succ] <;> ring
 

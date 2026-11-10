@@ -1,6 +1,12 @@
 import R7.Definitions
 import Mathlib.Data.Real.Sqrt
-import Mathlib.Tactic
+import Mathlib.Tactic.FieldSimp
+import Mathlib.Tactic.Ring
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.NormNum
+import Mathlib.Tactic.Positivity
+import Mathlib.Tactic.FunProp
+import Lean.Elab.Tactic.NormCast
 
 namespace R7.Core
 

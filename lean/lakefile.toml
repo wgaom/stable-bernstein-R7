@@ -1,5 +1,5 @@
 name = "R7"
-version = "1.0.0"
+version = "1.0.1"
 defaultTargets = ["R7"]
 
 [[require]]
@@ -9,3 +9,4 @@ rev = "v4.30.0-rc2"
 
 [[lean_lib]]
 name = "R7"
+moreLeanArgs = ["-j1"]

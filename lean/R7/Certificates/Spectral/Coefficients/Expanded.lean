@@ -1,8 +1,10 @@
 import R7.Spectral.PolynomialCompute
+import R7.Spectral.KeyPolyLiteral
+set_option Elab.async false
 namespace R7.Core.SpectralCoefficient
 set_option maxRecDepth 100000
 set_option maxHeartbeats 0
-def entryAData : KeyPoly := [
+noncomputable def entryAData : KeyPoly := r7_key_poly%[
 ⟨384,![0,12,0,0,0],105759354829824⟩,
 ⟨386,![2,12,0,0,0],837982036296576⟩,
 ⟨388,![4,12,0,0,0],2715487046717760⟩,
@@ -3189,7 +3191,7 @@ def entryAData : KeyPoly := [
 ⟨12582922,![10,0,0,0,12],1936777876021656⟩,
 ⟨12582924,![12,0,0,0,12],340100332584804⟩
 ]
-def entryLData : KeyPoly := [
+noncomputable def entryLData : KeyPoly := r7_key_poly%[
 ⟨384,![0,12,0,0,0],-708981990042240⟩,
 ⟨385,![1,12,0,0,0],-1444308557961600⟩,
 ⟨386,![2,12,0,0,0],23520976850612640⟩,
@@ -8616,7 +8618,7 @@ def entryLData : KeyPoly := [
 ⟨12582922,![10,0,0,0,12],163299623934533040⟩,
 ⟨12582924,![12,0,0,0,12],-1432692003894840⟩
 ]
-def entryQData : KeyPoly := [
+noncomputable def entryQData : KeyPoly := r7_key_poly%[
 ⟨384,![0,12,0,0,0],2860714298924160⟩,
 ⟨385,![1,12,0,0,0],-28036958209920000⟩,
 ⟨386,![2,12,0,0,0],100380901894701840⟩,
@@ -14043,7 +14045,7 @@ def entryQData : KeyPoly := [
 ⟨12582922,![10,0,0,0,12],128708744989469040⟩,
 ⟨12582924,![12,0,0,0,12],1708002866952360⟩
 ]
-def criticalLData : KeyPoly := [
+noncomputable def criticalLData : KeyPoly := r7_key_poly%[
 ⟨384,![0,12,0,0,0],5094026024832⟩,
 ⟨385,![1,12,0,0,0],-331314611760000⟩,
 ⟨386,![2,12,0,0,0],5945898298030368⟩,
@@ -19470,7 +19472,7 @@ def criticalLData : KeyPoly := [
 ⟨12582922,![10,0,0,0,12],35024883012371808⟩,
 ⟨12582924,![12,0,0,0,12],85798979339472⟩
 ]
-def criticalQ8Data : KeyPoly := [
+noncomputable def criticalQ8Data : KeyPoly := r7_key_poly%[
 ⟨256,![0,8,0,0,0],492628654⟩,
 ⟨257,![1,8,0,0,0],-4828098000⟩,
 ⟨258,![2,8,0,0,0],16338509424⟩,

@@ -1,10 +1,12 @@
 import R7.Certificates.Spectral.Coefficients.Substitution
 import R7.Certificates.Spectral.Coefficients.EntryAData
+import R7.Spectral.KeyPolyLiteral
+set_option Elab.async false
 namespace R7.Core.SpectralCoefficient.Expansion
 open R7.ComputablePolynomial
 set_option maxRecDepth 1000000
 set_option maxHeartbeats 0
-noncomputable def entryAG0 : KeyPoly := [⟨384,![0,12,0,0,0],105759354829824⟩,
+noncomputable def entryAG0 : KeyPoly := r7_key_poly%[⟨384,![0,12,0,0,0],105759354829824⟩,
 ⟨1376,![0,11,1,0,0],951834193468416⟩,
 ⟨2368,![0,10,2,0,0],4521212418974976⟩,
 ⟨3360,![0,9,3,0,0],14277512902026240⟩,
@@ -459,7 +461,7 @@ noncomputable def entryAG0 : KeyPoly := [⟨384,![0,12,0,0,0],105759354829824⟩
 ⟨11535360,![0,0,1,0,11],634556128978944⟩,
 ⟨11567104,![0,0,0,1,11],951834193468416⟩,
 ⟨12582912,![0,0,0,0,12],105759354829824⟩]
-noncomputable def entryAO0 : KeyPoly := [⟨384,![0,12,0,0,0],105759354829824⟩,
+noncomputable def entryAO0 : KeyPoly := r7_key_poly%[⟨384,![0,12,0,0,0],105759354829824⟩,
 ⟨1376,![0,11,1,0,0],951834193468416⟩,
 ⟨2368,![0,10,2,0,0],4521212418974976⟩,
 ⟨3360,![0,9,3,0,0],14277512902026240⟩,
@@ -914,9 +916,9 @@ noncomputable def entryAO0 : KeyPoly := [⟨384,![0,12,0,0,0],105759354829824⟩
 ⟨11535360,![0,0,1,0,11],634556128978944⟩,
 ⟨11567104,![0,0,0,1,11],951834193468416⟩,
 ⟨12582912,![0,0,0,0,12],105759354829824⟩]
-noncomputable def entryAG1 : KeyPoly := []
-noncomputable def entryAO1 : KeyPoly := []
-noncomputable def entryAG2 : KeyPoly := [⟨322,![2,10,0,0,0],837982036296576⟩,
+noncomputable def entryAG1 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAO1 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAG2 : KeyPoly := r7_key_poly%[⟨322,![2,10,0,0,0],837982036296576⟩,
 ⟨1314,![2,9,1,0,0],6284865272224320⟩,
 ⟨2306,![2,8,2,0,0],25139461088897280⟩,
 ⟨3298,![2,7,3,0,0],65991085358355360⟩,
@@ -1202,7 +1204,7 @@ noncomputable def entryAG2 : KeyPoly := [⟨322,![2,10,0,0,0],837982036296576⟩
 ⟨9438210,![2,0,1,0,9],4189910181482880⟩,
 ⟨9469954,![2,0,0,1,9],6284865272224320⟩,
 ⟨10485762,![2,0,0,0,10],837982036296576⟩]
-noncomputable def entryAO2 : KeyPoly := [⟨386,![2,12,0,0,0],837982036296576⟩,
+noncomputable def entryAO2 : KeyPoly := r7_key_poly%[⟨386,![2,12,0,0,0],837982036296576⟩,
 ⟨1378,![2,11,1,0,0],7960829344817472⟩,
 ⟨2370,![2,10,2,0,0],38547173669642496⟩,
 ⟨3362,![2,9,3,0,0],122554872808374240⟩,
@@ -1657,9 +1659,9 @@ noncomputable def entryAO2 : KeyPoly := [⟨386,![2,12,0,0,0],837982036296576⟩
 ⟨11535362,![2,0,1,0,11],5865874254076032⟩,
 ⟨11567106,![2,0,0,1,11],7960829344817472⟩,
 ⟨12582914,![2,0,0,0,12],837982036296576⟩]
-noncomputable def entryAG3 : KeyPoly := []
-noncomputable def entryAO3 : KeyPoly := []
-noncomputable def entryAG4 : KeyPoly := [⟨260,![4,8,0,0,0],2715487046717760⟩,
+noncomputable def entryAG3 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAO3 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAG4 : KeyPoly := r7_key_poly%[⟨260,![4,8,0,0,0],2715487046717760⟩,
 ⟨1252,![4,7,1,0,0],16292922280306560⟩,
 ⟨2244,![4,6,2,0,0],52951997410996320⟩,
 ⟨3236,![4,5,3,0,0],109977225392069280⟩,
@@ -1824,7 +1826,7 @@ noncomputable def entryAG4 : KeyPoly := [⟨260,![4,8,0,0,0],2715487046717760⟩
 ⟨7341060,![4,0,1,0,7],10861948186871040⟩,
 ⟨7372804,![4,0,0,1,7],16292922280306560⟩,
 ⟨8388612,![4,0,0,0,8],2715487046717760⟩]
-noncomputable def entryAO4 : KeyPoly := [⟨388,![4,12,0,0,0],2715487046717760⟩,
+noncomputable def entryAO4 : KeyPoly := r7_key_poly%[⟨388,![4,12,0,0,0],2715487046717760⟩,
 ⟨1380,![4,11,1,0,0],27154870467177600⟩,
 ⟨2372,![4,10,2,0,0],134416608812529120⟩,
 ⟨3364,![4,9,3,0,0],430404696904764960⟩,
@@ -2279,9 +2281,9 @@ noncomputable def entryAO4 : KeyPoly := [⟨388,![4,12,0,0,0],2715487046717760�
 ⟨11535364,![4,0,1,0,11],21723896373742080⟩,
 ⟨11567108,![4,0,0,1,11],27154870467177600⟩,
 ⟨12582916,![4,0,0,0,12],2715487046717760⟩]
-noncomputable def entryAG5 : KeyPoly := []
-noncomputable def entryAO5 : KeyPoly := []
-noncomputable def entryAG6 : KeyPoly := [⟨198,![6,6,0,0,0],4577082914646720⟩,
+noncomputable def entryAG5 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAO5 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAG6 : KeyPoly := r7_key_poly%[⟨198,![6,6,0,0,0],4577082914646720⟩,
 ⟨1190,![6,5,1,0,0],20596873115910240⟩,
 ⟨2182,![6,4,2,0,0],51492182789775600⟩,
 ⟨3174,![6,3,3,0,0],77238274184663400⟩,
@@ -2365,7 +2367,7 @@ noncomputable def entryAG6 : KeyPoly := [⟨198,![6,6,0,0,0],4577082914646720⟩
 ⟨5243910,![6,0,1,0,5],13731248743940160⟩,
 ⟨5275654,![6,0,0,1,5],20596873115910240⟩,
 ⟨6291462,![6,0,0,0,6],4577082914646720⟩]
-noncomputable def entryAO6 : KeyPoly := [⟨390,![6,12,0,0,0],4577082914646720⟩,
+noncomputable def entryAO6 : KeyPoly := r7_key_poly%[⟨390,![6,12,0,0,0],4577082914646720⟩,
 ⟨1382,![6,11,1,0,0],48059370603790560⟩,
 ⟨2374,![6,10,2,0,0],243729665204937840⟩,
 ⟨3366,![6,9,3,0,0],786686125954905000⟩,
@@ -2820,9 +2822,9 @@ noncomputable def entryAO6 : KeyPoly := [⟨390,![6,12,0,0,0],4577082914646720�
 ⟨11535366,![6,0,1,0,11],41193746231820480⟩,
 ⟨11567110,![6,0,0,1,11],48059370603790560⟩,
 ⟨12582918,![6,0,0,0,12],4577082914646720⟩]
-noncomputable def entryAG7 : KeyPoly := []
-noncomputable def entryAO7 : KeyPoly := []
-noncomputable def entryAG8 : KeyPoly := [⟨136,![8,4,0,0,0],4188590702840160⟩,
+noncomputable def entryAG7 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAO7 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAG8 : KeyPoly := r7_key_poly%[⟨136,![8,4,0,0,0],4188590702840160⟩,
 ⟨1128,![8,3,1,0,0],12565772108520480⟩,
 ⟨2120,![8,2,2,0,0],21990101189910840⟩,
 ⟨3112,![8,1,3,0,0],18848658162780720⟩,
@@ -2857,7 +2859,7 @@ noncomputable def entryAG8 : KeyPoly := [⟨136,![8,4,0,0,0],4188590702840160⟩
 ⟨3146760,![8,0,1,0,3],8377181405680320⟩,
 ⟨3178504,![8,0,0,1,3],12565772108520480⟩,
 ⟨4194312,![8,0,0,0,4],4188590702840160⟩]
-noncomputable def entryAO8 : KeyPoly := [⟨392,![8,12,0,0,0],4188590702840160⟩,
+noncomputable def entryAO8 : KeyPoly := r7_key_poly%[⟨392,![8,12,0,0,0],4188590702840160⟩,
 ⟨1384,![8,11,1,0,0],46074497731241760⟩,
 ⟨2376,![8,10,2,0,0],239796817737599160⟩,
 ⟨3368,![8,9,3,0,0],781172166079689840⟩,
@@ -3312,9 +3314,9 @@ noncomputable def entryAO8 : KeyPoly := [⟨392,![8,12,0,0,0],4188590702840160�
 ⟨11535368,![8,0,1,0,11],41885907028401600⟩,
 ⟨11567112,![8,0,0,1,11],46074497731241760⟩,
 ⟨12582920,![8,0,0,0,12],4188590702840160⟩]
-noncomputable def entryAG9 : KeyPoly := []
-noncomputable def entryAO9 : KeyPoly := []
-noncomputable def entryAG10 : KeyPoly := [⟨74,![10,2,0,0,0],1936777876021656⟩,
+noncomputable def entryAG9 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAO9 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAG10 : KeyPoly := r7_key_poly%[⟨74,![10,2,0,0,0],1936777876021656⟩,
 ⟨1066,![10,1,1,0,0],2905166814032484⟩,
 ⟨2058,![10,0,2,0,0],2905166814032484⟩,
 ⟨32810,![10,1,0,1,0],1936777876021656⟩,
@@ -3324,7 +3326,7 @@ noncomputable def entryAG10 : KeyPoly := [⟨74,![10,2,0,0,0],1936777876021656�
 ⟨1049610,![10,0,1,0,1],1936777876021656⟩,
 ⟨1081354,![10,0,0,1,1],2905166814032484⟩,
 ⟨2097162,![10,0,0,0,2],1936777876021656⟩]
-noncomputable def entryAO10 : KeyPoly := [⟨394,![10,12,0,0,0],1936777876021656⟩,
+noncomputable def entryAO10 : KeyPoly := r7_key_poly%[⟨394,![10,12,0,0,0],1936777876021656⟩,
 ⟨1386,![10,11,1,0,0],22272945574249044⟩,
 ⟨2378,![10,10,2,0,0],119111839375331844⟩,
 ⟨3370,![10,9,3,0,0],392197519894385340⟩,
@@ -3779,10 +3781,10 @@ noncomputable def entryAO10 : KeyPoly := [⟨394,![10,12,0,0,0],1936777876021656
 ⟨11535370,![10,0,1,0,11],21304556636238216⟩,
 ⟨11567114,![10,0,0,1,11],22272945574249044⟩,
 ⟨12582922,![10,0,0,0,12],1936777876021656⟩]
-noncomputable def entryAG11 : KeyPoly := []
-noncomputable def entryAO11 : KeyPoly := []
-noncomputable def entryAG12 : KeyPoly := [⟨12,![12,0,0,0,0],340100332584804⟩]
-noncomputable def entryAO12 : KeyPoly := [⟨396,![12,12,0,0,0],340100332584804⟩,
+noncomputable def entryAG11 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAO11 : KeyPoly := r7_key_poly%[]
+noncomputable def entryAG12 : KeyPoly := r7_key_poly%[⟨12,![12,0,0,0,0],340100332584804⟩]
+noncomputable def entryAO12 : KeyPoly := r7_key_poly%[⟨396,![12,12,0,0,0],340100332584804⟩,
 ⟨1388,![12,11,1,0,0],4081203991017648⟩,
 ⟨2380,![12,10,2,0,0],22446621950597064⟩,
 ⟨3372,![12,9,3,0,0],74822073168656880⟩,

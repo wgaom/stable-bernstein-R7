@@ -1,10 +1,12 @@
 import R7.Certificates.Spectral.Coefficients.Substitution
 import R7.Certificates.Spectral.Coefficients.CriticalQ8Data
+import R7.Spectral.KeyPolyLiteral
+set_option Elab.async false
 namespace R7.Core.SpectralCoefficient.Expansion
 open R7.ComputablePolynomial
 set_option maxRecDepth 1000000
 set_option maxHeartbeats 0
-noncomputable def criticalQ8G0 : KeyPoly := [⟨256,![0,8,0,0,0],492628654⟩,
+noncomputable def criticalQ8G0 : KeyPoly := r7_key_poly%[⟨256,![0,8,0,0,0],492628654⟩,
 ⟨1248,![0,7,1,0,0],2955771924⟩,
 ⟨2240,![0,6,2,0,0],17166671253⟩,
 ⟨3232,![0,5,3,0,0],58536663612⟩,
@@ -169,7 +171,7 @@ noncomputable def criticalQ8G0 : KeyPoly := [⟨256,![0,8,0,0,0],492628654⟩,
 ⟨7341056,![0,0,1,0,7],1970514616⟩,
 ⟨7372800,![0,0,0,1,7],2955771924⟩,
 ⟨8388608,![0,0,0,0,8],492628654⟩]
-noncomputable def criticalQ8O0 : KeyPoly := [⟨256,![0,8,0,0,0],492628654⟩,
+noncomputable def criticalQ8O0 : KeyPoly := r7_key_poly%[⟨256,![0,8,0,0,0],492628654⟩,
 ⟨1248,![0,7,1,0,0],2955771924⟩,
 ⟨2240,![0,6,2,0,0],17166671253⟩,
 ⟨3232,![0,5,3,0,0],58536663612⟩,
@@ -334,7 +336,7 @@ noncomputable def criticalQ8O0 : KeyPoly := [⟨256,![0,8,0,0,0],492628654⟩,
 ⟨7341056,![0,0,1,0,7],1970514616⟩,
 ⟨7372800,![0,0,0,1,7],2955771924⟩,
 ⟨8388608,![0,0,0,0,8],492628654⟩]
-noncomputable def criticalQ8G1 : KeyPoly := [⟨225,![1,7,0,0,0],-4828098000⟩,
+noncomputable def criticalQ8G1 : KeyPoly := r7_key_poly%[⟨225,![1,7,0,0,0],-4828098000⟩,
 ⟨1217,![1,6,1,0,0],-25347514500⟩,
 ⟨2209,![1,5,2,0,0],-63278093250⟩,
 ⟨3201,![1,4,3,0,0],-101740852500⟩,
@@ -454,7 +456,7 @@ noncomputable def criticalQ8G1 : KeyPoly := [⟨225,![1,7,0,0,0],-4828098000⟩,
 ⟨6292481,![1,0,1,0,6],16898343000⟩,
 ⟨6324225,![1,0,0,1,6],25347514500⟩,
 ⟨7340033,![1,0,0,0,7],4828098000⟩]
-noncomputable def criticalQ8O1 : KeyPoly := [⟨257,![1,8,0,0,0],-4828098000⟩,
+noncomputable def criticalQ8O1 : KeyPoly := r7_key_poly%[⟨257,![1,8,0,0,0],-4828098000⟩,
 ⟨1249,![1,7,1,0,0],-30175612500⟩,
 ⟨2241,![1,6,2,0,0],-88625607750⟩,
 ⟨3233,![1,5,3,0,0],-165018945750⟩,
@@ -614,7 +616,7 @@ noncomputable def criticalQ8O1 : KeyPoly := [⟨257,![1,8,0,0,0],-4828098000⟩,
 ⟨7341057,![1,0,1,0,7],21726441000⟩,
 ⟨7372801,![1,0,0,1,7],30175612500⟩,
 ⟨8388609,![1,0,0,0,8],4828098000⟩]
-noncomputable def criticalQ8G2 : KeyPoly := [⟨194,![2,6,0,0,0],16338509424⟩,
+noncomputable def criticalQ8G2 : KeyPoly := r7_key_poly%[⟨194,![2,6,0,0,0],16338509424⟩,
 ⟨1186,![2,5,1,0,0],73523292408⟩,
 ⟨2178,![2,4,2,0,0],212498965395⟩,
 ⟨3170,![2,3,3,0,0],376594471530⟩,
@@ -698,7 +700,7 @@ noncomputable def criticalQ8G2 : KeyPoly := [⟨194,![2,6,0,0,0],16338509424⟩,
 ⟨5243906,![2,0,1,0,5],49015528272⟩,
 ⟨5275650,![2,0,0,1,5],73523292408⟩,
 ⟨6291458,![2,0,0,0,6],16338509424⟩]
-noncomputable def criticalQ8O2 : KeyPoly := [⟨258,![2,8,0,0,0],16338509424⟩,
+noncomputable def criticalQ8O2 : KeyPoly := r7_key_poly%[⟨258,![2,8,0,0,0],16338509424⟩,
 ⟨1250,![2,7,1,0,0],106200311256⟩,
 ⟨2242,![2,6,2,0,0],375884059635⟩,
 ⟨3234,![2,5,3,0,0],875115694728⟩,
@@ -863,7 +865,7 @@ noncomputable def criticalQ8O2 : KeyPoly := [⟨258,![2,8,0,0,0],16338509424⟩,
 ⟨7341058,![2,0,1,0,7],81692547120⟩,
 ⟨7372802,![2,0,0,1,7],106200311256⟩,
 ⟨8388610,![2,0,0,0,8],16338509424⟩]
-noncomputable def criticalQ8G3 : KeyPoly := [⟨163,![3,5,0,0,0],-14681232000⟩,
+noncomputable def criticalQ8G3 : KeyPoly := r7_key_poly%[⟨163,![3,5,0,0,0],-14681232000⟩,
 ⟨1155,![3,4,1,0,0],-55054620000⟩,
 ⟨2147,![3,3,2,0,0],-85402867500⟩,
 ⟨3139,![3,2,3,0,0],-84689910000⟩,
@@ -919,7 +921,7 @@ noncomputable def criticalQ8G3 : KeyPoly := [⟨163,![3,5,0,0,0],-14681232000⟩
 ⟨4195331,![3,0,1,0,4],36703080000⟩,
 ⟨4227075,![3,0,0,1,4],55054620000⟩,
 ⟨5242883,![3,0,0,0,5],14681232000⟩]
-noncomputable def criticalQ8O3 : KeyPoly := [⟨259,![3,8,0,0,0],-14681232000⟩,
+noncomputable def criticalQ8O3 : KeyPoly := r7_key_poly%[⟨259,![3,8,0,0,0],-14681232000⟩,
 ⟨1251,![3,7,1,0,0],-99098316000⟩,
 ⟨2243,![3,6,2,0,0],-294610423500⟩,
 ⟨3235,![3,5,3,0,0],-520743604500⟩,
@@ -1079,7 +1081,7 @@ noncomputable def criticalQ8O3 : KeyPoly := [⟨259,![3,8,0,0,0],-14681232000⟩
 ⟨7341059,![3,0,1,0,7],80746776000⟩,
 ⟨7372803,![3,0,0,1,7],99098316000⟩,
 ⟨8388611,![3,0,0,0,8],14681232000⟩]
-noncomputable def criticalQ8G4 : KeyPoly := [⟨132,![4,4,0,0,0],44937868704⟩,
+noncomputable def criticalQ8G4 : KeyPoly := r7_key_poly%[⟨132,![4,4,0,0,0],44937868704⟩,
 ⟨1124,![4,3,1,0,0],134813606112⟩,
 ⟨2116,![4,2,2,0,0],262641210696⟩,
 ⟨3108,![4,1,3,0,0],255655209168⟩,
@@ -1114,7 +1116,7 @@ noncomputable def criticalQ8G4 : KeyPoly := [⟨132,![4,4,0,0,0],44937868704⟩,
 ⟨3146756,![4,0,1,0,3],89875737408⟩,
 ⟨3178500,![4,0,0,1,3],134813606112⟩,
 ⟨4194308,![4,0,0,0,4],44937868704⟩]
-noncomputable def criticalQ8O4 : KeyPoly := [⟨260,![4,8,0,0,0],44937868704⟩,
+noncomputable def criticalQ8O4 : KeyPoly := r7_key_poly%[⟨260,![4,8,0,0,0],44937868704⟩,
 ⟨1252,![4,7,1,0,0],314565080928⟩,
 ⟨2244,![4,6,2,0,0],1071522847368⟩,
 ⟨3236,![4,5,3,0,0],2294853163440⟩,
@@ -1279,7 +1281,7 @@ noncomputable def criticalQ8O4 : KeyPoly := [⟨260,![4,8,0,0,0],44937868704⟩,
 ⟨7341060,![4,0,1,0,7],269627212224⟩,
 ⟨7372804,![4,0,0,1,7],314565080928⟩,
 ⟨8388612,![4,0,0,0,8],44937868704⟩]
-noncomputable def criticalQ8G5 : KeyPoly := [⟨101,![5,3,0,0,0],-11901240000⟩,
+noncomputable def criticalQ8G5 : KeyPoly := r7_key_poly%[⟨101,![5,3,0,0,0],-11901240000⟩,
 ⟨1093,![5,2,1,0,0],-26777790000⟩,
 ⟨2085,![5,1,2,0,0],-8925930000⟩,
 ⟨3077,![5,0,3,0,0],-5950620000⟩,
@@ -1299,7 +1301,7 @@ noncomputable def criticalQ8G5 : KeyPoly := [⟨101,![5,3,0,0,0],-11901240000⟩
 ⟨2098181,![5,0,1,0,2],17851860000⟩,
 ⟨2129925,![5,0,0,1,2],26777790000⟩,
 ⟨3145733,![5,0,0,0,3],11901240000⟩]
-noncomputable def criticalQ8O5 : KeyPoly := [⟨261,![5,8,0,0,0],-11901240000⟩,
+noncomputable def criticalQ8O5 : KeyPoly := r7_key_poly%[⟨261,![5,8,0,0,0],-11901240000⟩,
 ⟨1253,![5,7,1,0,0],-86283990000⟩,
 ⟨2245,![5,6,2,0,0],-261827280000⟩,
 ⟨3237,![5,5,3,0,0],-437370570000⟩,
@@ -1457,7 +1459,7 @@ noncomputable def criticalQ8O5 : KeyPoly := [⟨261,![5,8,0,0,0],-11901240000⟩
 ⟨7341061,![5,0,1,0,7],77358060000⟩,
 ⟨7372805,![5,0,0,1,7],86283990000⟩,
 ⟨8388613,![5,0,0,0,8],11901240000⟩]
-noncomputable def criticalQ8G6 : KeyPoly := [⟨70,![6,2,0,0,0],33490246704⟩,
+noncomputable def criticalQ8G6 : KeyPoly := r7_key_poly%[⟨70,![6,2,0,0,0],33490246704⟩,
 ⟨1062,![6,1,1,0,0],50235370056⟩,
 ⟨2054,![6,0,2,0,0],50235370056⟩,
 ⟨32806,![6,1,0,1,0],33490246704⟩,
@@ -1467,7 +1469,7 @@ noncomputable def criticalQ8G6 : KeyPoly := [⟨70,![6,2,0,0,0],33490246704⟩,
 ⟨1049606,![6,0,1,0,1],33490246704⟩,
 ⟨1081350,![6,0,0,1,1],50235370056⟩,
 ⟨2097158,![6,0,0,0,2],33490246704⟩]
-noncomputable def criticalQ8O6 : KeyPoly := [⟨262,![6,8,0,0,0],33490246704⟩,
+noncomputable def criticalQ8O6 : KeyPoly := r7_key_poly%[⟨262,![6,8,0,0,0],33490246704⟩,
 ⟨1254,![6,7,1,0,0],251176850280⟩,
 ⟨2246,![6,6,2,0,0],854001290952⟩,
 ⟨3238,![6,5,3,0,0],1724747705256⟩,
@@ -1632,10 +1634,10 @@ noncomputable def criticalQ8O6 : KeyPoly := [⟨262,![6,8,0,0,0],33490246704⟩,
 ⟨7341062,![6,0,1,0,7],234431726928⟩,
 ⟨7372806,![6,0,0,1,7],251176850280⟩,
 ⟨8388614,![6,0,0,0,8],33490246704⟩]
-noncomputable def criticalQ8G7 : KeyPoly := []
-noncomputable def criticalQ8O7 : KeyPoly := []
-noncomputable def criticalQ8G8 : KeyPoly := [⟨8,![8,0,0,0,0],463031514⟩]
-noncomputable def criticalQ8O8 : KeyPoly := [⟨264,![8,8,0,0,0],463031514⟩,
+noncomputable def criticalQ8G7 : KeyPoly := r7_key_poly%[]
+noncomputable def criticalQ8O7 : KeyPoly := r7_key_poly%[]
+noncomputable def criticalQ8G8 : KeyPoly := r7_key_poly%[⟨8,![8,0,0,0,0],463031514⟩]
+noncomputable def criticalQ8O8 : KeyPoly := r7_key_poly%[⟨264,![8,8,0,0,0],463031514⟩,
 ⟨1256,![8,7,1,0,0],3704252112⟩,
 ⟨2248,![8,6,2,0,0],12964882392⟩,
 ⟨3240,![8,5,3,0,0],25929764784⟩,
@@ -1800,12 +1802,12 @@ noncomputable def criticalQ8O8 : KeyPoly := [⟨264,![8,8,0,0,0],463031514⟩,
 ⟨7341064,![8,0,1,0,7],3704252112⟩,
 ⟨7372808,![8,0,0,1,7],3704252112⟩,
 ⟨8388616,![8,0,0,0,8],463031514⟩]
-noncomputable def criticalQ8G9 : KeyPoly := []
-noncomputable def criticalQ8O9 : KeyPoly := []
-noncomputable def criticalQ8G10 : KeyPoly := []
-noncomputable def criticalQ8O10 : KeyPoly := []
-noncomputable def criticalQ8G11 : KeyPoly := []
-noncomputable def criticalQ8O11 : KeyPoly := []
-noncomputable def criticalQ8G12 : KeyPoly := []
-noncomputable def criticalQ8O12 : KeyPoly := []
+noncomputable def criticalQ8G9 : KeyPoly := r7_key_poly%[]
+noncomputable def criticalQ8O9 : KeyPoly := r7_key_poly%[]
+noncomputable def criticalQ8G10 : KeyPoly := r7_key_poly%[]
+noncomputable def criticalQ8O10 : KeyPoly := r7_key_poly%[]
+noncomputable def criticalQ8G11 : KeyPoly := r7_key_poly%[]
+noncomputable def criticalQ8O11 : KeyPoly := r7_key_poly%[]
+noncomputable def criticalQ8G12 : KeyPoly := r7_key_poly%[]
+noncomputable def criticalQ8O12 : KeyPoly := r7_key_poly%[]
 end R7.Core.SpectralCoefficient.Expansion

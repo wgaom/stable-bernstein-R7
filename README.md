@@ -21,11 +21,11 @@ lake exe cache get
 lake build
 ```
 
-On a fresh clone, omit `lake exe cache get` to build the required mathlib modules from source instead of using their precompiled cache. The R7 proofs are checked in either case.
+`lake exe cache get` downloads precompiled mathlib dependencies; omit it to build them from source.
+
+Use `LEAN_NUM_THREADS=13 lake build` to set the number of concurrent build jobs.
 
 A successful build checks both theorem proofs and prints their axiom dependencies. Each must contain only `propext`, `Classical.choice`, and `Quot.sound`. The certificates are checked by the Lean kernel.
-
-To compare the formal result with the paper, check the parameter table and definitions in `Definitions.lean`, then the hypotheses and conclusions in `Theorems.lean`. Successful compilation verifies the intervening algebraic proofs. The geometric and analytic arguments remain in the paper.
 
 ## Mathematica
 

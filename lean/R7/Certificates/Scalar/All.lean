@@ -1,25 +1,6 @@
-import R7.Certificates.Scalar.Row01E0
-import R7.Certificates.Scalar.Row01E1
-import R7.Certificates.Scalar.Row02E0
-import R7.Certificates.Scalar.Row02E1
-import R7.Certificates.Scalar.Row03E0
-import R7.Certificates.Scalar.Row03E1
-import R7.Certificates.Scalar.Row04E0
-import R7.Certificates.Scalar.Row04E1
-import R7.Certificates.Scalar.Row05E0
-import R7.Certificates.Scalar.Row05E1
-import R7.Certificates.Scalar.Row06E0
-import R7.Certificates.Scalar.Row06E1
-import R7.Certificates.Scalar.Row07E0
-import R7.Certificates.Scalar.Row07E1
-import R7.Certificates.Scalar.Row08E0
-import R7.Certificates.Scalar.Row08E1
-import R7.Certificates.Scalar.Row09E0
-import R7.Certificates.Scalar.Row09E1
-import R7.Certificates.Scalar.Row10E0
-import R7.Certificates.Scalar.Row10E1
-import R7.Certificates.Scalar.Row11E0
-import R7.Certificates.Scalar.Row11E1
+import R7.Certificates.Scalar.Batches.Batch00
+import R7.Certificates.Scalar.Batches.Batch01
+set_option Elab.async false
 
 namespace R7.Certificates.Scalar
 open R7.Core

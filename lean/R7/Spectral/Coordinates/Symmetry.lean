@@ -1,5 +1,5 @@
 import R7.Spectral.Coordinates.Representation
-import Mathlib.Tactic
+import Mathlib.Tactic.Ring
 
 noncomputable section
 open scoped BigOperators Matrix

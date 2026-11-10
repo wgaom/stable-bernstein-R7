@@ -1,5 +1,6 @@
 import R7.Spectral.PolynomialCompute
 import Mathlib.Algebra.MvPolynomial.Monad
+set_option Elab.async false
 namespace R7.Core.SpectralCoefficient.Expansion
 open R7.ComputablePolynomial
 open scoped BigOperators
